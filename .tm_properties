@@ -1,0 +1,47 @@
+binary = "{$binary}"
+encoding = "UTF-8"
+exclude = "{$exclude,.DS_Store}"
+excludeInProject= "{.git}"
+excludeInFileChooser = "{$excludeInFileChooser,$excludeInProject}"
+excludeInFolderSearch = "{$excludeInFolderSearch,$excludeInProject}"
+include = "{$include,.{editorconfig,git?*,tm_properties}}"
+projectDirectory = "$CWD"
+projectName = "@christiangrete/exit-process-with-error"
+rightWindowTitle = "${TM_FILEPATH:? — ${TM_FILEPATH/${CWD}\///}:${TM_DISPLAYNAME:+ — $TM_DISPLAYNAME}}"
+scmBranch = "${TM_SCM_BRANCH:+ ($TM_SCM_BRANCH)}"
+leftWindowTitle = "$projectName$scmBranch"
+softTabs = true
+tabSize = 2
+windowTitle = "$leftWindowTitle$rightWindowTitle"
+wrapColumn = 80
+
+[ attr.untitled ]
+fileType = text.plain
+
+[ source.tm-properties ]
+wrapColumn = 120
+
+[ text ]
+softTabs = false
+spellChecking = true
+spellingLanguage = "en"
+tabSize = 4
+wrapColumn = "Use Window Frame"
+
+[ "*.md" ]
+fileType = text.html.markdown
+
+[ ".editorconfig" ]
+fileType = source.java-properties
+
+[ ".git/COMMIT_EDITMSG" ]
+fileType = text.git-commit
+
+[ ".gitignore" ]
+fileType = source.git-config
+
+[ ".gitmessage" ]
+fileType = text.plain
+
+[ ".tm_properties" ]
+fileType = source.tm-properties
