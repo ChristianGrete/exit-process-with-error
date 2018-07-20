@@ -1,0 +1,131 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "tslint-config-standard",
+    "tslint-eslint-rules"
+  ],
+  "jsRules": {
+    "quotemark": {
+      "options": [
+        "avoid-escape",
+        "avoid-template",
+        "single"
+      ]
+    },
+    "semicolon": {
+      "options": [
+        "never"
+      ]
+    },
+    "trailing-comma": {
+      "options": [
+        {
+          "multiline": "never",
+          "singleline": "never"
+        }
+      ]
+    },
+    "variable-name": {
+      "options": [
+        "allow-leading-underscore",
+        "allow-pascal-case",
+        "ban-keywords",
+        "check-format"
+      ]
+    }
+  },
+  "rules": {
+    "array-bracket-spacing": {
+      "options": [
+        "never"
+      ],
+      "severity": "warning"
+    },
+    "interface-name": {
+      "options": [
+        "never-prefix"
+      ],
+      "severity": "warning"
+    },
+    "linebreak-style": {
+      "options": [
+        "LF"
+      ],
+      "severity": "error"
+    },
+    "no-console": {
+      "severity": "warning"
+    },
+    "no-var-keyword": {
+      "severity": "off"
+    },
+    "object-curly-spacing": {
+      "options": [
+        "never"
+      ],
+      "severity": "warning"
+    },
+    "object-literal-shorthand": {
+      "options": [
+        "always"
+      ],
+      "severity": "error"
+    },
+    "quotemark": {
+      "options": [
+        "avoid-escape",
+        "avoid-template",
+        "single"
+      ]
+    },
+    "space-before-function-paren": {
+      "options": [
+        {
+          "anonymous": "always",
+          "asyncArrow": "always",
+          "constructor": "never",
+          "method": "never",
+          "named": "never"
+        }
+      ],
+      "severity": "warning"
+    },
+    "ter-computed-property-spacing": {
+      "options": [
+        "never"
+      ],
+      "severity": "warning"
+    },
+    "typedef-whitespace": {
+      "options": [
+        {
+          "call-signature": "nospace",
+          "index-signature": "nospace",
+          "parameter": "nospace",
+          "property-declaration": "nospace",
+          "variable-declaration": "nospace"
+        },
+        {
+          "call-signature": "nospace",
+          "index-signature": "nospace",
+          "parameter": "nospace",
+          "property-declaration": "nospace",
+          "variable-declaration": "nospace"
+        }
+      ],
+      "severity": "warning"
+    },
+    "whitespace": {
+      "options": [
+        "check-branch",
+        "check-decl",
+        "check-operator",
+        "check-separator",
+        "check-rest-spread",
+        "check-typecast",
+        "check-preblock"
+      ],
+      "severity": "warning"
+    }
+  }
+}

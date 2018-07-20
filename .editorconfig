@@ -6,7 +6,7 @@ insert_final_newline = true
 tab_width = 4
 trim_trailing_whitespace = true
 
-[{*.md,.git{/COMMIT_EDITMSG,message}}]
+[{*.md,.{git{/COMMIT_EDITMSG,message},nvmrc}}]
 indent_size = 4
 indent_style = tab
 insert_final_newline = false

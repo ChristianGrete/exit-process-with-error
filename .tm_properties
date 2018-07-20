@@ -1,10 +1,10 @@
 binary = "{$binary}"
 encoding = "UTF-8"
 exclude = "{$exclude,.DS_Store}"
-excludeInProject= "{.git}"
+excludeInProject= "{.git,build,dist,node_modules}"
 excludeInFileChooser = "{$excludeInFileChooser,$excludeInProject}"
 excludeInFolderSearch = "{$excludeInFolderSearch,$excludeInProject}"
-include = "{$include,.{editorconfig,git?*,tm_properties}}"
+include = "{$include,.{babelrc,editorconfig,git?*,nvmrc,tm_properties}}"
 projectDirectory = "$CWD"
 projectName = "@christiangrete/exit-process-with-error"
 rightWindowTitle = "${TM_FILEPATH:? — ${TM_FILEPATH/${CWD}\///}:${TM_DISPLAYNAME:+ — $TM_DISPLAYNAME}}"
@@ -16,10 +16,13 @@ windowTitle = "$leftWindowTitle$rightWindowTitle"
 wrapColumn = 80
 
 [ attr.untitled ]
-fileType = text.plain
+fileType = source.ts
+
+[ source.json ]
+wrapColumn = 120
 
 [ source.tm-properties ]
-wrapColumn = 120
+wrapColumn = 160
 
 [ text ]
 softTabs = false
@@ -31,6 +34,12 @@ wrapColumn = "Use Window Frame"
 [ "*.md" ]
 fileType = text.html.markdown
 
+[ "*.{{,c}js,ts}" ]
+fileType = source.ts
+
+[ ".{gitmessage,nvmrc}" ]
+fileType = text.plain
+
 [ ".editorconfig" ]
 fileType = source.java-properties
 
@@ -40,8 +49,8 @@ fileType = text.git-commit
 [ ".gitignore" ]
 fileType = source.git-config
 
-[ ".gitmessage" ]
-fileType = text.plain
-
 [ ".tm_properties" ]
 fileType = source.tm-properties
+
+[ "{*.json,.babelrc}" ]
+fileType = source.json

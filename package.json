@@ -1,0 +1,88 @@
+{
+  "author": {
+    "email": "webmaster@christiangrete.com",
+    "name": "Christian Grete",
+    "url": "https://christiangrete.com"
+  },
+  "bugs": {
+    "email": "webmaster@christiangrete.com",
+    "url": "https://github.com/ChristianGrete/exit-process-with-error/issues"
+  },
+  "contributors": [
+    {
+      "email": "webmaster@christiangrete.com",
+      "name": "Christian Grete",
+      "url": "https://christiangrete.com"
+    }
+  ],
+  "dependencies": {},
+  "description": "A function to terminate Node.js processes with an error and a non-zero exit code",
+  "devDependencies": {
+    "@types/jest": "^23.3.0",
+    "@types/node": "^10.5.2",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "browser-sync": "^2.24.5",
+    "jest": "^23.4.1",
+    "jsonlint-cli": "^1.0.1",
+    "npm-run-all": "^4.1.3",
+    "shx": "^0.3.2",
+    "ts-jest": "^23.0.1",
+    "tslint": "^5.11.0",
+    "tslint-config-standard": "^7.1.0",
+    "tslint-eslint-rules": "^5.3.1",
+    "typescript": "^2.9.2"
+  },
+  "engines": {
+    "node": "^10.7.0",
+    "npm": "^6.2.0"
+  },
+  "files": [],
+  "homepage": "https://github.com/ChristianGrete/exit-process-with-error",
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "node",
+      "ts"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(j|t)s$",
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    }
+  },
+  "keywords": [],
+  "license": "MIT",
+  "main": "dist/exitProcessWithError.js",
+  "maintainers": [
+    {
+      "email": "webmaster@christiangrete.com",
+      "name": "Christian Grete",
+      "url": "https://christiangrete.com"
+    }
+  ],
+  "module": "dist/exitProcessWithError.mjs",
+  "name": "@christiangrete/exit-process-with-error",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ChristianGrete/exit-process-with-error.git"
+  },
+  "scripts": {
+    "build": "run-s clean:build compile transform",
+    "clean": "run-p clean:build clean:coverage",
+    "clean:build": "shx rm -fr build/",
+    "clean:coverage": "shx rm -fr coverage/",
+    "compile": "tsc",
+    "lint": "run-p lint:js lint:json lint:ts",
+    "lint:js": "tslint scripts/**/*.js",
+    "lint:json": "jsonlint-cli .babelrc ts{config,lint}.json",
+    "lint:ts": "tslint src/**/*.ts",
+    "prestart": "run-p clean:coverage 'test -- --coverage'",
+    "pretest": "npm run lint",
+    "start": "browser-sync start -c scripts/start.js",
+    "test": "jest",
+    "transform": "shx mkdir build/cjs/ && babel build/esm/exitProcessWithError.js -o build/cjs/exitProcessWithError.js"
+  },
+  "version": "0.0.0"
+}
