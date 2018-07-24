@@ -9,7 +9,7 @@ const defaultError:ErrorWithOptionalExitCode = new Error(
   ERR_PROCESS_TERMINATED
 )
 
-defaultError.exitCode = EXIT_CODE_INVALID_ARG
+Object.defineProperty(defaultError, 'exitCode', {value: EXIT_CODE_INVALID_ARG})
 
 function exitProcessWithError(
   $error:ErrorWithOptionalExitCode = defaultError,

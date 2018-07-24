@@ -12,7 +12,7 @@
     "outDir": "build/esm",
     "removeComments": true,
     "sourceMap": true,
-    "target": "es5"
+    "target": "es2015"
   },
   "files": [
     "src/exitProcessWithError.ts"
