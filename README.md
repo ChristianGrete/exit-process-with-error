@@ -4,7 +4,7 @@
 
 ## Note
 
-This branch does not contain any source files or artifacts as it is in its initial state. Please checkout the `develop` branch to get the current state of development.
+This branch does not contain any source files or artifacts as it is in its initial state. Please checkout the [`develop`](https://github.com/ChristianGrete/exit-process-with-error/tree/develop) branch to get the current state of development.
 
 ## License
 
