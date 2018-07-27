@@ -1,6 +1,6 @@
-# Contributing to @[christiangrete][repository-owner-github-url]/[exit-process-with-error][repository-github-url]
+# Code of Conduct – @[christiangrete][repository-owner-github-url]/[exit-process-with-error][repository-github-url]
 
-Guidelines will follow soon.
+Code will follow soon.
 
 ---
 

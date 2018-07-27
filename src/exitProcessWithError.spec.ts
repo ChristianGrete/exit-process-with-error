@@ -23,6 +23,16 @@ describe(MODULE_ID, () => {
 
 const {defaultError, exitProcessWithError} = imports
 
+describe('defaultError', () => {
+  it('is a string', () => {
+    expect(typeof defaultError.message).toBe('string')
+  })
+
+  it('is not empty', () => {
+    expect(defaultError.message.length).toBeGreaterThan(0)
+  })
+})
+
 describe('exitProcessWithError()', () => {
   const {error: _originalErrorMethod} = console
   const {exit: _originalExitMethod} = process

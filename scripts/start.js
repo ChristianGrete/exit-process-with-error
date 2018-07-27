@@ -32,7 +32,7 @@ module.exports = {
     }
   ],
   server: {
-    baseDir: join(BASEPATH, 'coverage'),
+    baseDir: join(BASEPATH, 'reports'),
     directory: true
   },
   watch: true
