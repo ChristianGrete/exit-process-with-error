@@ -9,9 +9,11 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 ### [develop]
 #### Added
 - chore(*): provide project mvp [POC | [a3450e0]]
-- chore(*): improve project infrastructure [POC]
+- chore(*): improve project infrastructure [POC | [b36daea]]
 #### Deprecated
 - chore(*): drop es5 support [[#1] | [c700b02]]
+#### Security
+- chore(*): update dev-deps and excludes
 
 ### [master]
 #### Added
@@ -20,6 +22,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - docs(readme): link develop branch [[972703a]]
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[b36daea]: https://github.com/ChristianGrete/exit-process-with-error/commit/b36daeaae7da6b68e414fc02239c3ec4c81a85ce
 [c700b02]: https://github.com/ChristianGrete/exit-process-with-error/commit/c700b029741dcbdd46440ac5cbabf3ee3d0441b0
 [#1]: https://github.com/ChristianGrete/exit-process-with-error/issues/1
 [a3450e0]: https://github.com/ChristianGrete/exit-process-with-error/commit/a3450e04468fe2a3977e3baa77d177a55409761a
