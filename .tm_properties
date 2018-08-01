@@ -34,7 +34,7 @@ wrapColumn = "Use Window Frame"
 [ "*.md" ]
 fileType = text.html.markdown
 
-[ "*.{{,c}js,ts}" ]
+[ "*.{{,m}js,ts}" ]
 fileType = source.ts
 
 [ ".{gitmessage,nvmrc}" ]
@@ -52,5 +52,5 @@ fileType = source.git-config
 [ ".tm_properties" ]
 fileType = source.tm-properties
 
-[ "{*.json,.babelrc}" ]
+[ "{*.{json,map},.babelrc}" ]
 fileType = source.json

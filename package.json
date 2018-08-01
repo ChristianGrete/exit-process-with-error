@@ -19,7 +19,7 @@
   "description": "A function to terminate Node.js processes with an error and a non-zero exit code",
   "devDependencies": {
     "@types/jest": "^23.3.1",
-    "@types/node": "^10.5.4",
+    "@types/node": "^10.5.5",
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "browser-sync": "^2.24.6",
@@ -76,7 +76,7 @@
     "url": "git://github.com/ChristianGrete/exit-process-with-error.git"
   },
   "scripts": {
-    "build": "run-s clean:build compile transform",
+    "build": "run-s clean:build compile rename transform",
     "clean": "run-p clean:build clean:reports",
     "clean:build": "shx rm -fr build/",
     "clean:reports": "shx rm -fr reports/",
@@ -88,12 +88,13 @@
     "mutate": "stryker run",
     "prestart": "run-p clean:reports lint && run-s report",
     "pretest": "run-s lint mutate",
+    "rename": "node scripts/rename.js",
     "report": "run-s report:mutation report:coverage",
     "report:coverage": "jest --coverage",
     "report:mutation": "stryker run --reporter html",
     "start": "browser-sync start -c scripts/start.js",
     "test": "jest",
-    "transform": "shx mkdir build/cjs/ && babel build/esm/exitProcessWithError.js -o build/cjs/exitProcessWithError.js"
+    "transform": "babel build/exitProcessWithError.mjs -o build/exitProcessWithError.js -s"
   },
   "version": "0.0.0"
 }
