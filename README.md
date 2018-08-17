@@ -15,11 +15,11 @@ yarn add @christiangrete/exit-process-with-error
 ```
 
 ### Usage
-Simply import it as an ES2015 module and terminate your process:
+Simply import it as an ES2015 module and terminate :bomb: your process:
 ```js
 import exitProcessWithError from '@christiangrete/exit-process-with-error'
 
-exitProcessWithError() // Boom! :bomb:
+exitProcessWithError() // Boom!
 ```
 
 ## Contributing
