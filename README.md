@@ -2,6 +2,26 @@
 
 > A function to terminate Node.js processes with an error and a non-zero exit code
 
+## Getting started
+
+### Installation
+To install this package to your [Node.js](https://nodejs.org) modules, run:
+```sh
+npm i -S @christiangrete/exit-process-with-error
+```
+Or, using [Yarn](https://yarnpkg.com), run:
+```sh
+yarn add @christiangrete/exit-process-with-error
+```
+
+### Usage
+Simply import it as an ES2015 module and terminate your process:
+```js
+import exitProcessWithError from '@christiangrete/exit-process-with-error'
+
+exitProcessWithError() // Boom! :bomb:
+```
+
 ## Contributing
 
 If you want to contribute as a developer, see the [contribution guidelines](CONTRIBUTING.md) on how to get involved with this project.
