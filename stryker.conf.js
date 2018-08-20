@@ -11,7 +11,7 @@ const strykerConfig = {
   mutate: [GLOB_MUTABLE_FILES],
   mutator: 'typescript',
   packageManager: 'npm',
-  reporter: ['clear-text'],
+  reporters: ['clear-text'],
   testRunner: 'jest',
   tsconfigFile: FILENAME_TYPESCRIPT_CONFIG
 }
