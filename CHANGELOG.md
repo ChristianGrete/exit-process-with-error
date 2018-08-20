@@ -15,7 +15,8 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 #### Changed
 - docs(readme): move bomb emoji [[579b2d4]]
 - docs(readme): replace bomb emoji [[51fbd3b]]
-- refactor(*): remove npm package scope
+- refactor(*): remove npm package scope [[3f0ee43]]
+- refactor(mate): remove npm package scope
 #### Deprecated
 - chore(*): drop es5 support [[#1] | [c700b02]]
 #### Security
@@ -30,6 +31,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - docs(readme): link develop branch [[972703a]]
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[3f0ee43]: https://github.com/ChristianGrete/exit-process-with-error/commit/3f0ee437f130aa7b3a40e7954693a166fea67f6d
 [51fbd3b]: https://github.com/ChristianGrete/exit-process-with-error/commit/51fbd3b621bb29093c16d25a1407bf01e51f7796
 [8a23c67]: https://github.com/ChristianGrete/exit-process-with-error/commit/8a23c67777693109c99ff882fc81de9f738dd9b6
 [08293a1]: https://github.com/ChristianGrete/exit-process-with-error/commit/08293a1f2d8dd8cdf5c2f4c81ed5fe3c0f2dd15a
