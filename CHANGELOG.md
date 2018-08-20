@@ -14,12 +14,13 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - docs(readme): add getting started section [[4b3e7d4]]
 #### Changed
 - docs(readme): move bomb emoji [[579b2d4]]
+- docs(readme): replace bomb emoji
 #### Deprecated
 - chore(*): drop es5 support [[#1] | [c700b02]]
 #### Security
 - chore(*): update dev-deps and excludes [[a9a433b]]
 - chore(*): update engines [[08293a1]]
-- chore(*): update dev-deps
+- chore(*): update dev-deps [[8a23c67]]
 
 ### [master]
 #### Added
@@ -28,6 +29,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - docs(readme): link develop branch [[972703a]]
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[8a23c67]: https://github.com/ChristianGrete/exit-process-with-error/commit/8a23c67777693109c99ff882fc81de9f738dd9b6
 [08293a1]: https://github.com/ChristianGrete/exit-process-with-error/commit/08293a1f2d8dd8cdf5c2f4c81ed5fe3c0f2dd15a
 [579b2d4]: https://github.com/ChristianGrete/exit-process-with-error/commit/579b2d4b083624f447241faf4efcf20fab417b07
 [4b3e7d4]: https://github.com/ChristianGrete/exit-process-with-error/commit/4b3e7d49666ccbf9df8f58b58d61f24683e63938
