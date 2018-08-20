@@ -1,4 +1,4 @@
-# @[christiangrete][repository-owner-github-url]/[exit-process-with-error][repository-github-url] :bomb:
+# [exit-process-with-error][repository-github-url] :bomb:
 
 > A function to terminate Node.js processes with an error and a non-zero exit code
 
@@ -7,17 +7,17 @@
 ### Installation
 To install this package to your [Node.js](https://nodejs.org) modules, run:
 ```sh
-npm i -S @christiangrete/exit-process-with-error
+npm i -S exit-process-with-error
 ```
 Or, using [Yarn](https://yarnpkg.com), run:
 ```sh
-yarn add @christiangrete/exit-process-with-error
+yarn add exit-process-with-error
 ```
 
 ### Usage
 Simply import it as an ES2015 module and terminate :boom: your process:
 ```js
-import exitProcessWithError from '@christiangrete/exit-process-with-error'
+import exitProcessWithError from 'exit-process-with-error'
 
 exitProcessWithError() // Boom!
 ```
@@ -40,5 +40,4 @@ Copyright © 2018 [Christian Grete][repository-owner-url]
 - [XING](https://www.xing.com/profile/Christian_Grete2)
 
 [repository-github-url]: https://github.com/ChristianGrete/exit-process-with-error
-[repository-owner-github-url]: https://github.com/ChristianGrete
 [repository-owner-url]: https://christiangrete.com

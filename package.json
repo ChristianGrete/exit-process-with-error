@@ -69,7 +69,7 @@
     }
   ],
   "module": "dist/exitProcessWithError.mjs",
-  "name": "@christiangrete/exit-process-with-error",
+  "name": "exit-process-with-error",
   "private": true,
   "repository": {
     "type": "git",
