@@ -21,12 +21,13 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 #### Deprecated
 - chore(*): drop es5 support [[#1] | [c700b02]]
 #### Fixed
-- fix(*): provide declaration in production build
+- fix(*): provide declaration in production build [[8e1d126]]
 #### Security
 - chore(*): update dev-deps and excludes [[a9a433b]]
 - chore(*): update engines [[08293a1]]
 - chore(*): update dev-deps [[8a23c67]]
 - chore(*): update dev-deps again [[65d6455]]
+- chore(*): implement travis-ci
 
 ### [master]
 #### Added
@@ -35,6 +36,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - docs(readme): link develop branch [[972703a]]
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[8e1d126]: https://github.com/ChristianGrete/exit-process-with-error/commit/8e1d12609b36c4619f1cff14076fa24562284b33
 [c3a485b]: https://github.com/ChristianGrete/exit-process-with-error/commit/c3a485ba40cf52ba987e69899531c2567ff365f9
 [#2]: https://github.com/ChristianGrete/exit-process-with-error/issues/2
 [65d6455]: https://github.com/ChristianGrete/exit-process-with-error/commit/65d6455df3357f86c14e6d871be3c0d82f1232f6

@@ -4,7 +4,7 @@ exclude = "{$exclude,.DS_Store}"
 excludeInProject= "{.git,build,dist,node_modules}"
 excludeInFileChooser = "{$excludeInFileChooser,$excludeInProject}"
 excludeInFolderSearch = "{$excludeInFolderSearch,$excludeInProject}"
-include = "{$include,.{babelrc,editorconfig,git?*,nvmrc,tm_properties}}"
+include = "{$include,.{babelrc,editorconfig,git?*,nvmrc,tm_properties,travis.yml}}"
 projectDirectory = "$CWD"
 projectName = "exit-process-with-error"
 rightWindowTitle = "${TM_FILEPATH:? — ${TM_FILEPATH/${CWD}\///}:${TM_DISPLAYNAME:+ — $TM_DISPLAYNAME}}"
@@ -33,6 +33,9 @@ wrapColumn = "Use Window Frame"
 
 [ "*.md" ]
 fileType = text.html.markdown
+
+[ "*.yml" ]
+fileType = source.yaml
 
 [ "*.{{,m}js,ts}" ]
 fileType = source.ts
