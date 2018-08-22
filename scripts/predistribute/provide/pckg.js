@@ -95,7 +95,8 @@ function updateMergedPackagePaths($mergedPackage) {
   ))
 
   $mergedPackage.main = relativizePath($mergedPackage.main)
-  $mergedPackage.module = relativizePath($mergedPackage.main)
+  $mergedPackage.module = relativizePath($mergedPackage.module)
+  $mergedPackage.types = relativizePath($mergedPackage.types)
 
   return $mergedPackage
 }

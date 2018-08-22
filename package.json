@@ -45,7 +45,7 @@
   },
   "files": [
     "*.md",
-    "dist/index.{,m}js"
+    "dist/index.{d.t,{,m}j}s"
   ],
   "homepage": "https://github.com/ChristianGrete/exit-process-with-error",
   "jest": {
@@ -94,17 +94,19 @@
     "clear": "run-p clear:dist",
     "clear:dist": "shx rm -fr dist/",
     "compile": "tsc",
+    "declare": "tsc --declarationMap false --emitDeclarationOnly",
     "lint": "run-p lint:js lint:json lint:ts",
     "lint:js": "tslint stryker.conf.js scripts/**/*.js",
     "lint:json": "jsonlint-cli .babelrc ts{config,lint}.json",
     "lint:ts": "tslint src/**/*.ts",
     "mutate": "stryker run",
     "predistribute": "run-s predistribute:prepare && run-p predistribute:uglify predistribute:provide",
-    "predistribute:prepare": "run-p build clear:dist && shx mkdir -p dist/",
+    "predistribute:prepare": "run-p build clear:dist && run-s 'declare -- --outDir dist/' predistribute:rename",
     "predistribute:provide": "run-p predistribute:provide:lcns predistribute:provide:pckg predistribute:provide:rdm",
-    "predistribute:provide:lcns": "shx cp LICENSE.md dist/LICENSE.md",
+    "predistribute:provide:lcns": "shx cp -f LICENSE.md dist/LICENSE.md",
     "predistribute:provide:pckg": "node scripts/predistribute/provide/pckg.js",
     "predistribute:provide:rdm": "node scripts/predistribute/provide/rdm.js",
+    "predistribute:rename": "shx mv -f dist/exitProcessWithError.d.ts dist/index.d.ts",
     "predistribute:uglify": "run-p predistribute:uglify:js predistribute:uglify:mjs",
     "predistribute:uglify:js": "uglifyjs build/exitProcessWithError.js -o dist/index.js -cm toplevel",
     "predistribute:uglify:mjs": "uglifyjs build/exitProcessWithError.mjs -o dist/index.mjs -cm toplevel",
@@ -119,5 +121,6 @@
     "test": "jest",
     "transform": "babel build/exitProcessWithError.mjs -o build/exitProcessWithError.js -s"
   },
+  "types": "dist/index.d.ts",
   "version": "0.0.0"
 }
