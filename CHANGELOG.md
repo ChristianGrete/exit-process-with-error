@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - chore(*): improve project infrastructure [POC | [b36daea]]
 - chore(*): restructure build output layout [POC | [ef117d7]]
 - docs(readme): add getting started section [[4b3e7d4]]
+- chore(*): implement production build [[#2]]
 #### Changed
 - docs(readme): move bomb emoji [[579b2d4]]
 - docs(readme): replace bomb emoji [[51fbd3b]]
@@ -23,7 +24,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - chore(*): update dev-deps and excludes [[a9a433b]]
 - chore(*): update engines [[08293a1]]
 - chore(*): update dev-deps [[8a23c67]]
-- chore(*): update dev-deps again
+- chore(*): update dev-deps again [[65d6455]]
 
 ### [master]
 #### Added
@@ -32,6 +33,8 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - docs(readme): link develop branch [[972703a]]
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[#2]: https://github.com/ChristianGrete/exit-process-with-error/issues/2
+[65d6455]: https://github.com/ChristianGrete/exit-process-with-error/commit/65d6455df3357f86c14e6d871be3c0d82f1232f6
 [49f2ae6]: https://github.com/ChristianGrete/exit-process-with-error/commit/49f2ae62a78dbbb4286ce0cb7a1cd7cf70d80bdf
 [3f0ee43]: https://github.com/ChristianGrete/exit-process-with-error/commit/3f0ee437f130aa7b3a40e7954693a166fea67f6d
 [51fbd3b]: https://github.com/ChristianGrete/exit-process-with-error/commit/51fbd3b621bb29093c16d25a1407bf01e51f7796
@@ -52,9 +55,10 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 
 ---
 
-Copyright © 2018 ([MIT](LICENSE.md)) [Christian Grete][repository-owner-url]
+Copyright © 2018 ([MIT][repository-license-url]) [Christian Grete][repository-owner-url]
 
 [keep-a-changelog-spec-url]: https://keepachangelog.com/en/1.0.0/
 [repository-github-url]: https://github.com/ChristianGrete/exit-process-with-error
+[repository-license-url]: LICENSE.md
 [repository-owner-url]: https://christiangrete.com
 [semantic-versioning-spec-url]: https://semver.org/spec/v2.0.0.html

@@ -1,0 +1,9 @@
+{
+  "devDependencies": null,
+  "engines": {
+    "node": ">=6",
+    "npm": ">=3.8.6"
+  },
+  "jest": null,
+  "scripts": null
+}
