@@ -28,7 +28,8 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - chore(*): update dev-deps [[8a23c67]]
 - chore(*): update dev-deps again [[65d6455]]
 - chore(*): implement travis-ci [[a4248db]]
-- chore(*): add stable node version
+- chore(*): add stable node version [[1f3fbc2]]
+- chore(*): add custom travis build script
 
 ### [master]
 #### Added
@@ -37,6 +38,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - docs(readme): link develop branch [[972703a]]
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[1f3fbc2]: https://github.com/ChristianGrete/exit-process-with-error/commit/1f3fbc2c58c5d4d671583e4aad0e35f252d745bc
 [a4248db]: https://github.com/ChristianGrete/exit-process-with-error/commit/a4248dbd67771e541a2631679f94c4bc896a63e5
 [8e1d126]: https://github.com/ChristianGrete/exit-process-with-error/commit/8e1d12609b36c4619f1cff14076fa24562284b33
 [c3a485b]: https://github.com/ChristianGrete/exit-process-with-error/commit/c3a485ba40cf52ba987e69899531c2567ff365f9
