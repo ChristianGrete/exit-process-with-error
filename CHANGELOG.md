@@ -7,14 +7,18 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 ## [Unreleased]
 
 ### [develop]
+
+### [master]
 #### Added
+- init(*): create project [[3f49e30]]
 - chore(*): provide project mvp [POC | [a3450e0]]
 - chore(*): improve project infrastructure [POC | [b36daea]]
 - chore(*): restructure build output layout [POC | [ef117d7]]
 - docs(readme): add getting started section [[4b3e7d4]]
 - chore(*): implement production build [[#2] | [c3a485b]]
-- docs(readme): add example section
+- docs(readme): add example section [[17f2a4e]]
 #### Changed
+- docs(readme): link develop branch [[972703a]]
 - docs(readme): move bomb emoji [[579b2d4]]
 - docs(readme): replace bomb emoji [[51fbd3b]]
 - refactor(*): remove npm package scope [[3f0ee43]]
@@ -24,6 +28,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - docs(readme): switch badges/shields [[db7457e]]
 - docs(*): make license a plain file [[63ec1b8]]
 - docs(license): refresh template [[4792af8]]
+- docs(log): update changelog
 #### Deprecated
 - chore(*): drop es5 support [[#1] | [c700b02]]
 #### Fixed
@@ -40,13 +45,8 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - chore(*): add stable node version [[1f3fbc2]]
 - chore(*): add custom travis build script [[d81c3f8]]
 
-### [master]
-#### Added
-- init(*): create project [[3f49e30]]
-#### Changed
-- docs(readme): link develop branch [[972703a]]
-
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[17f2a4e]: https://github.com/ChristianGrete/exit-process-with-error/commit/17f2a4e644443bd69fe26d0faf4036fcdaccf0a8
 [4792af8]: https://github.com/ChristianGrete/exit-process-with-error/commit/4792af8d99686c7d266af91c084f43968910d66c
 [63ec1b8]: https://github.com/ChristianGrete/exit-process-with-error/commit/63ec1b8da331f30fad34e49fc77387897e9d69de
 [db7457e]: https://github.com/ChristianGrete/exit-process-with-error/commit/db7457ed61e072473c43976a45c4dcbac63f54f3
