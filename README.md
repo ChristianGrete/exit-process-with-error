@@ -70,7 +70,7 @@ Copyright © 2018 [Christian Grete][repository-owner-url]
 - [LinkedIn](https://www.linkedin.com/in/ChristianGrete)
 - [XING](https://www.xing.com/profile/Christian_Grete2)
 
-[repository-ci-service-shield]: https://img.shields.io/travis/ChristianGrete/exit-process-with-error.svg
+[repository-ci-service-shield]: https://img.shields.io/travis/ChristianGrete/exit-process-with-error/develop.svg
 [repository-ci-service-url]: https://travis-ci.org/ChristianGrete/exit-process-with-error
 [repository-contribution-guidelines-url]: CONTRIBUTING.md
 [repository-github-url]: https://github.com/ChristianGrete/exit-process-with-error

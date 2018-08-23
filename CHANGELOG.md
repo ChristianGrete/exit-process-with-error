@@ -7,6 +7,8 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 ## [Unreleased]
 
 ### [develop]
+#### Changed
+- docs(readme): update badges/shields [[HEAD]]
 
 ### [master]
 #### Added
@@ -29,7 +31,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - docs(*): make license a plain file [[63ec1b8]]
 - docs(license): refresh template [[4792af8]]
 - docs(log): update changelog [[67a7292]]
-- docs(log): update changelog, again
+- docs(log): update changelog, again [[40f0ace]]
 #### Deprecated
 - chore(*): drop es5 support [[#1] | [c700b02]]
 #### Fixed
@@ -50,6 +52,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - chore(*): define code ownership [[c791b5d]]
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[40f0ace]: https://github.com/ChristianGrete/exit-process-with-error/commit/40f0acebc2b283627329ecafa2f167ba3dda4f31
 [8dca1bf]: https://github.com/ChristianGrete/exit-process-with-error/commit/8dca1bfd57cd136333089efc67563dbfc00dd985
 [c791b5d]: https://github.com/ChristianGrete/exit-process-with-error/commit/c791b5d2f73a7efdbdfee066b7f5fc53cc80f337
 [67a7292]: https://github.com/ChristianGrete/exit-process-with-error/commit/67a7292886bee9b69cc2a41b5be8e5ef90f8e804
@@ -85,6 +88,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 [51f4711]: https://github.com/ChristianGrete/exit-process-with-error/commit/51f4711e0f622b41158fc3c054ce93ec945fa806
 [972703a]: https://github.com/ChristianGrete/exit-process-with-error/commit/972703aa8e219b87f38585cbf9631f0c43fd643c
 [3f49e30]: https://github.com/ChristianGrete/exit-process-with-error/commit/3f49e305b5453ac6707f81ecde2103bf93e2d2f4
+[HEAD]: https://github.com/ChristianGrete/exit-process-with-error/commit/HEAD
 [develop]: https://github.com/ChristianGrete/exit-process-with-error/compare/master...develop
 [master]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...master
 
