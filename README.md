@@ -26,6 +26,33 @@ import exitProcessWithError from 'exit-process-with-error'
 exitProcessWithError() // Boom!
 ```
 
+## Example
+
+Let’s assume that we want to read a corrupted file using `Promise`:
+```js
+import {readFile} from 'fs'
+import {exitProcessWithError} from 'exit-process-with-error'
+
+const whenFileRead = new Promise(($resolve, $reject) => {
+  readFile('corrupted-file.txt', ($error, $data) => {
+    if ($error === null) {
+      $resolve($data)
+    } else {
+      $error.exitCode = $error.exitCode || 123
+
+      $reject($error)
+    }
+  })
+})
+
+whenFileRead
+  .then(console.log) // Won’t be invoked
+  .catch(exitProcessWithError)
+
+// Prints the error object and
+// terminates the process with exit code 123
+```
+
 ## Contributing
 
 If you want to contribute as a developer, see the [contribution guidelines][repository-contribution-guidelines-url] on how to get involved with this project.
