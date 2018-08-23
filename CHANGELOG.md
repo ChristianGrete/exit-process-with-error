@@ -18,11 +18,12 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - docs(readme): replace bomb emoji [[51fbd3b]]
 - refactor(*): remove npm package scope [[3f0ee43]]
 - refactor(mate): remove npm package scope [[49f2ae6]]
+- chore(*): update travis configuration
 #### Deprecated
 - chore(*): drop es5 support [[#1] | [c700b02]]
 #### Fixed
 - fix(*): provide declaration in production build [[8e1d126]]
-- fix(*): support node <10 in build process
+- fix(*): support node <10 in build process [[c6f979d]]
 #### Security
 - chore(*): update dev-deps and excludes [[a9a433b]]
 - chore(*): update engines [[08293a1]]
@@ -39,6 +40,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - docs(readme): link develop branch [[972703a]]
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[c6f979d]: https://github.com/ChristianGrete/exit-process-with-error/commit/c6f979d022d81fd9ac0e8001fb38f33f5cf90171
 [d81c3f8]: https://github.com/ChristianGrete/exit-process-with-error/commit/d81c3f8cb939fc9f1e8077642812f8efbe2b389e
 [1f3fbc2]: https://github.com/ChristianGrete/exit-process-with-error/commit/1f3fbc2c58c5d4d671583e4aad0e35f252d745bc
 [a4248db]: https://github.com/ChristianGrete/exit-process-with-error/commit/a4248dbd67771e541a2631679f94c4bc896a63e5

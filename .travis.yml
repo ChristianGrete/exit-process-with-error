@@ -1,8 +1,10 @@
 language: node_js
 node_js:
-  - "6"
+  - "6.0.0"
   - "stable"
 notifications:
-  email: webmaster@christiangrete.com
-script:
-  - npm run preversion
+  email:
+    recipients: webmaster@christiangrete.com
+  on_failure: always
+  on_success: never
+script: npm run preversion
