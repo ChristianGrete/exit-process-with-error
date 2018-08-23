@@ -103,7 +103,7 @@
     "predistribute": "run-s predistribute:prepare && run-p predistribute:uglify predistribute:provide",
     "predistribute:prepare": "run-p build clear:dist && run-s 'declare -- --outDir dist/' predistribute:rename",
     "predistribute:provide": "run-p predistribute:provide:lcns predistribute:provide:pckg predistribute:provide:rdm",
-    "predistribute:provide:lcns": "shx cp -f LICENSE.md dist/LICENSE.md",
+    "predistribute:provide:lcns": "shx cp -f LICENSE dist/LICENSE",
     "predistribute:provide:pckg": "node scripts/predistribute/provide/pckg.js",
     "predistribute:provide:rdm": "node scripts/predistribute/provide/rdm.js",
     "predistribute:rename": "shx mv -f dist/exitProcessWithError.d.ts dist/index.d.ts",

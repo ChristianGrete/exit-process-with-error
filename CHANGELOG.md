@@ -20,7 +20,8 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - refactor(mate): remove npm package scope [[49f2ae6]]
 - chore(*): update travis configuration [[ae646d5]]
 - docs(readme): add badges/shields [[fb5ad3b]]
-- docs(readme): switch badges/shields
+- docs(readme): switch badges/shields [[db7457e]]
+- docs(*): make license a plain file
 #### Deprecated
 - chore(*): drop es5 support [[#1] | [c700b02]]
 #### Fixed
@@ -44,6 +45,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - docs(readme): link develop branch [[972703a]]
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[db7457e]: https://github.com/ChristianGrete/exit-process-with-error/commit/db7457ed61e072473c43976a45c4dcbac63f54f3
 [fb5ad3b]: https://github.com/ChristianGrete/exit-process-with-error/commit/fb5ad3b1ba7200338d614232ed7ce8f291eee4b9
 [08e00a7]: https://github.com/ChristianGrete/exit-process-with-error/commit/08e00a78b19166c289705343dc64517f813cee23
 [01d3999]: https://github.com/ChristianGrete/exit-process-with-error/commit/01d3999be448a676bf097cf9c5d2d5182cfddbdd
@@ -80,6 +82,6 @@ Copyright © 2018 ([MIT][repository-license-url]) [Christian Grete][repository-o
 
 [keep-a-changelog-spec-url]: https://keepachangelog.com/en/1.0.0/
 [repository-github-url]: https://github.com/ChristianGrete/exit-process-with-error
-[repository-license-url]: LICENSE.md
+[repository-license-url]: LICENSE
 [repository-owner-url]: https://christiangrete.com
 [semantic-versioning-spec-url]: https://semver.org/spec/v2.0.0.html

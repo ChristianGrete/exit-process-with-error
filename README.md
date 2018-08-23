@@ -50,5 +50,5 @@ Copyright © 2018 [Christian Grete][repository-owner-url]
 [repository-language-shield]: https://img.shields.io/badge/language-TypeScript-%232b7489.svg
 [repository-language-url]: https://www.typescriptlang.org
 [repository-license-shield]: https://img.shields.io/github/license/ChristianGrete/exit-process-with-error.svg
-[repository-license-url]: LICENSE.md
+[repository-license-url]: LICENSE
 [repository-owner-url]: https://christiangrete.com

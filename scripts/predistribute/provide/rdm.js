@@ -17,7 +17,7 @@ const PATH_MASTER_BRANCH = '/blob/master/'
 const ERR_INVALID_HOMEPAGE_PROP = 'Invalid value for property `homepage` in '
   + 'package.json'
 
-const relativePathsPattern = /(CONTRIBUTING|LICENSE)\.md/g
+const relativePathsPattern = /(CONTRIBUTING\.md|LICENSE)/g
 
 /////////
 // LIB //
