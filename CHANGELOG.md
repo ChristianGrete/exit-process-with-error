@@ -22,6 +22,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - chore(*): drop es5 support [[#1] | [c700b02]]
 #### Fixed
 - fix(*): provide declaration in production build [[8e1d126]]
+- fix(*): support node <10 in build process
 #### Security
 - chore(*): update dev-deps and excludes [[a9a433b]]
 - chore(*): update engines [[08293a1]]
@@ -29,7 +30,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - chore(*): update dev-deps again [[65d6455]]
 - chore(*): implement travis-ci [[a4248db]]
 - chore(*): add stable node version [[1f3fbc2]]
-- chore(*): add custom travis build script
+- chore(*): add custom travis build script [[d81c3f8]]
 
 ### [master]
 #### Added
@@ -38,6 +39,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - docs(readme): link develop branch [[972703a]]
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[d81c3f8]: https://github.com/ChristianGrete/exit-process-with-error/commit/d81c3f8cb939fc9f1e8077642812f8efbe2b389e
 [1f3fbc2]: https://github.com/ChristianGrete/exit-process-with-error/commit/1f3fbc2c58c5d4d671583e4aad0e35f252d745bc
 [a4248db]: https://github.com/ChristianGrete/exit-process-with-error/commit/a4248dbd67771e541a2631679f94c4bc896a63e5
 [8e1d126]: https://github.com/ChristianGrete/exit-process-with-error/commit/8e1d12609b36c4619f1cff14076fa24562284b33

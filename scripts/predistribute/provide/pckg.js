@@ -1,4 +1,3 @@
-const {readFile, writeFile} = require('fs').promises
 const {isAbsolute, join, relative, resolve} = require('path')
 
 //////////////
@@ -8,23 +7,30 @@ const {isAbsolute, join, relative, resolve} = require('path')
 // Paths and filenames
 const BASEPATH = resolve(__dirname, '..', '..', '..')
 const DIRNAME_DIST = join(BASEPATH, 'dist')
+const DIRNAME_LIB = join(BASEPATH, 'lib')
 const FILENAME_PACKAGE = join(BASEPATH, 'package.json')
 const FILENAME_PACKAGE_DIFF = join(BASEPATH, 'package-diff.json')
 const FILENAME_PACKAGE_DIST = join(DIRNAME_DIST, 'package.json')
 
 const ERR_INVALID_PACKAGE = 'Cannot parse package.json or package-diff.json'
 
+/////////
+// LIB //
+/////////
+
+const {readFile, writeFile} = require(DIRNAME_LIB)
+
 ///////////
 // TASKS //
 ///////////
 
 function loadPackage() {
-  return readFile(FILENAME_PACKAGE, 'utf8')
+  return readFile(FILENAME_PACKAGE)
 }
 
 function loadPackageDiff($data) {
   return (
-    readFile(FILENAME_PACKAGE_DIFF, 'utf8')
+    readFile(FILENAME_PACKAGE_DIFF)
       .then($dataDiff => [$data, $dataDiff])
   )
 }

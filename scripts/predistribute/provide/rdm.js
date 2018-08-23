@@ -1,4 +1,3 @@
-const {readFile, writeFile} = require('fs').promises
 const {join, resolve} = require('path')
 const {parse} = require('url')
 
@@ -9,6 +8,7 @@ const {parse} = require('url')
 // Paths and filenames
 const BASEPATH = resolve(__dirname, '..', '..', '..')
 const DIRNAME_DIST = join(BASEPATH, 'dist')
+const DIRNAME_LIB = join(BASEPATH, 'lib')
 const FILENAME_PACKAGE = join(BASEPATH, 'package.json')
 const FILENAME_README_IN = join(BASEPATH, 'README.md')
 const FILENAME_README_OUT = join(DIRNAME_DIST, 'README.md')
@@ -19,12 +19,18 @@ const ERR_INVALID_HOMEPAGE_PROP = 'Invalid value for property `homepage` in '
 
 const relativePathsPattern = /(CONTRIBUTING|LICENSE)\.md/g
 
+/////////
+// LIB //
+/////////
+
+const {readFile, writeFile} = require(DIRNAME_LIB)
+
 ///////////
 // TASKS //
 ///////////
 
 function loadPackage() {
-  return readFile(FILENAME_PACKAGE, 'utf8')
+  return readFile(FILENAME_PACKAGE)
 }
 
 function getPackageHomepage($data) {
@@ -75,7 +81,7 @@ function appendMasterBranchPathToURL($homepageURL) {
 
 function getReadmeFileContent($homepageURL) {
   return (
-    readFile(FILENAME_README_IN, 'utf8')
+    readFile(FILENAME_README_IN)
       .then($data => [$homepageURL, $data])
   )
 }
