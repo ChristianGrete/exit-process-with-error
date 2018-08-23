@@ -28,7 +28,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - docs(readme): switch badges/shields [[db7457e]]
 - docs(*): make license a plain file [[63ec1b8]]
 - docs(license): refresh template [[4792af8]]
-- docs(log): update changelog
+- docs(log): update changelog [[67a7292]]
 #### Deprecated
 - chore(*): drop es5 support [[#1] | [c700b02]]
 #### Fixed
@@ -44,8 +44,10 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - chore(*): implement travis-ci [[a4248db]]
 - chore(*): add stable node version [[1f3fbc2]]
 - chore(*): add custom travis build script [[d81c3f8]]
+- chore(*): define code ownership
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[67a7292]: https://github.com/ChristianGrete/exit-process-with-error/commit/67a7292886bee9b69cc2a41b5be8e5ef90f8e804
 [17f2a4e]: https://github.com/ChristianGrete/exit-process-with-error/commit/17f2a4e644443bd69fe26d0faf4036fcdaccf0a8
 [4792af8]: https://github.com/ChristianGrete/exit-process-with-error/commit/4792af8d99686c7d266af91c084f43968910d66c
 [63ec1b8]: https://github.com/ChristianGrete/exit-process-with-error/commit/63ec1b8da331f30fad34e49fc77387897e9d69de

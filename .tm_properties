@@ -55,5 +55,5 @@ fileType = source.tm-properties
 [ "{*.{json,map},.babelrc}" ]
 fileType = source.json
 
-[ "{.{gitmessage,nvmrc},LICENSE}" ]
+[ "{.{gitmessage,nvmrc},CODEOWNERS,LICENSE}" ]
 fileType = text.plain
