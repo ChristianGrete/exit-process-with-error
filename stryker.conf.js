@@ -13,6 +13,7 @@ const strykerConfig = {
   packageManager: 'npm',
   reporters: ['clear-text'],
   testRunner: 'jest',
+  timeoutMS: 10000,
   tsconfigFile: FILENAME_TYPESCRIPT_CONFIG
 }
 
