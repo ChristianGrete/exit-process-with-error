@@ -29,13 +29,16 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - docs(*): make license a plain file [[63ec1b8]]
 - docs(license): refresh template [[4792af8]]
 - docs(log): update changelog [[67a7292]]
+- docs(log): update changelog, again
 #### Deprecated
 - chore(*): drop es5 support [[#1] | [c700b02]]
 #### Fixed
+- fix(license): use template [[51f4711]]
 - fix(*): provide declaration in production build [[8e1d126]]
 - fix(*): support node <10 in build process [[c6f979d]]
 - fix(ci): increase stryker timeout [[01d3999]]
 - fix(ci): increase stryker timeout, again [[08e00a7]]
+- fix(code): use template [[8dca1bf]]
 #### Security
 - chore(*): update dev-deps and excludes [[a9a433b]]
 - chore(*): update engines [[08293a1]]
@@ -44,9 +47,11 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - chore(*): implement travis-ci [[a4248db]]
 - chore(*): add stable node version [[1f3fbc2]]
 - chore(*): add custom travis build script [[d81c3f8]]
-- chore(*): define code ownership
+- chore(*): define code ownership [[c791b5d]]
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[8dca1bf]: https://github.com/ChristianGrete/exit-process-with-error/commit/8dca1bfd57cd136333089efc67563dbfc00dd985
+[c791b5d]: https://github.com/ChristianGrete/exit-process-with-error/commit/c791b5d2f73a7efdbdfee066b7f5fc53cc80f337
 [67a7292]: https://github.com/ChristianGrete/exit-process-with-error/commit/67a7292886bee9b69cc2a41b5be8e5ef90f8e804
 [17f2a4e]: https://github.com/ChristianGrete/exit-process-with-error/commit/17f2a4e644443bd69fe26d0faf4036fcdaccf0a8
 [4792af8]: https://github.com/ChristianGrete/exit-process-with-error/commit/4792af8d99686c7d266af91c084f43968910d66c
@@ -77,6 +82,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 [c700b02]: https://github.com/ChristianGrete/exit-process-with-error/commit/c700b029741dcbdd46440ac5cbabf3ee3d0441b0
 [#1]: https://github.com/ChristianGrete/exit-process-with-error/issues/1
 [a3450e0]: https://github.com/ChristianGrete/exit-process-with-error/commit/a3450e04468fe2a3977e3baa77d177a55409761a
+[51f4711]: https://github.com/ChristianGrete/exit-process-with-error/commit/51f4711e0f622b41158fc3c054ce93ec945fa806
 [972703a]: https://github.com/ChristianGrete/exit-process-with-error/commit/972703aa8e219b87f38585cbf9631f0c43fd643c
 [3f49e30]: https://github.com/ChristianGrete/exit-process-with-error/commit/3f49e305b5453ac6707f81ecde2103bf93e2d2f4
 [develop]: https://github.com/ChristianGrete/exit-process-with-error/compare/master...develop
