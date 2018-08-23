@@ -24,7 +24,8 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 #### Fixed
 - fix(*): provide declaration in production build [[8e1d126]]
 - fix(*): support node <10 in build process [[c6f979d]]
-- fix(ci): increase stryker timeout
+- fix(ci): increase stryker timeout [[01d3999]]
+- fix(ci): increase stryker timeout, again
 #### Security
 - chore(*): update dev-deps and excludes [[a9a433b]]
 - chore(*): update engines [[08293a1]]
@@ -41,6 +42,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - docs(readme): link develop branch [[972703a]]
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[01d3999]: https://github.com/ChristianGrete/exit-process-with-error/commit/01d3999be448a676bf097cf9c5d2d5182cfddbdd
 [ae646d5]: https://github.com/ChristianGrete/exit-process-with-error/commit/ae646d55ceec1a82cde4853a61f1054e3f3a6042
 [c6f979d]: https://github.com/ChristianGrete/exit-process-with-error/commit/c6f979d022d81fd9ac0e8001fb38f33f5cf90171
 [d81c3f8]: https://github.com/ChristianGrete/exit-process-with-error/commit/d81c3f8cb939fc9f1e8077642812f8efbe2b389e
