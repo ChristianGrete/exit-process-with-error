@@ -19,13 +19,14 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - refactor(*): remove npm package scope [[3f0ee43]]
 - refactor(mate): remove npm package scope [[49f2ae6]]
 - chore(*): update travis configuration [[ae646d5]]
+- docs(readme): add badges/shields
 #### Deprecated
 - chore(*): drop es5 support [[#1] | [c700b02]]
 #### Fixed
 - fix(*): provide declaration in production build [[8e1d126]]
 - fix(*): support node <10 in build process [[c6f979d]]
 - fix(ci): increase stryker timeout [[01d3999]]
-- fix(ci): increase stryker timeout, again
+- fix(ci): increase stryker timeout, again [[08e00a7]]
 #### Security
 - chore(*): update dev-deps and excludes [[a9a433b]]
 - chore(*): update engines [[08293a1]]
@@ -42,6 +43,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - docs(readme): link develop branch [[972703a]]
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[08e00a7]: https://github.com/ChristianGrete/exit-process-with-error/commit/08e00a78b19166c289705343dc64517f813cee23
 [01d3999]: https://github.com/ChristianGrete/exit-process-with-error/commit/01d3999be448a676bf097cf9c5d2d5182cfddbdd
 [ae646d5]: https://github.com/ChristianGrete/exit-process-with-error/commit/ae646d55ceec1a82cde4853a61f1054e3f3a6042
 [c6f979d]: https://github.com/ChristianGrete/exit-process-with-error/commit/c6f979d022d81fd9ac0e8001fb38f33f5cf90171
