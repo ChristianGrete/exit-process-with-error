@@ -1,7 +1,7 @@
 # [exit-process-with-error][repository-github-url] :bomb:
 
-[![Language: TypeScript][repository-language-shield]][repository-language-url]
 [![License: MIT][repository-license-shield]][repository-license-url]
+[![Language: TypeScript][repository-language-shield]][repository-language-url]
 [![Latest Build][repository-ci-service-shield]][repository-ci-service-url]
 
 > A function to terminate Node.js processes with an error and a non-zero exit code
