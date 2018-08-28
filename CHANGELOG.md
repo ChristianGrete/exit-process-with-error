@@ -8,7 +8,8 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 
 ### [develop]
 #### Changed
-- docs(readme): update badges/shields [[HEAD]]
+- docs(readme): update badges/shields [[c446f09]]
+- chore(*): extend project library
 
 ### [master]
 #### Added
@@ -52,6 +53,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - chore(*): define code ownership [[c791b5d]]
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[c446f09]: https://github.com/ChristianGrete/exit-process-with-error/commit/c446f09d864b28c45085fa9fd7129f861913bf1b
 [40f0ace]: https://github.com/ChristianGrete/exit-process-with-error/commit/40f0acebc2b283627329ecafa2f167ba3dda4f31
 [8dca1bf]: https://github.com/ChristianGrete/exit-process-with-error/commit/8dca1bfd57cd136333089efc67563dbfc00dd985
 [c791b5d]: https://github.com/ChristianGrete/exit-process-with-error/commit/c791b5d2f73a7efdbdfee066b7f5fc53cc80f337
@@ -88,8 +90,8 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 [51f4711]: https://github.com/ChristianGrete/exit-process-with-error/commit/51f4711e0f622b41158fc3c054ce93ec945fa806
 [972703a]: https://github.com/ChristianGrete/exit-process-with-error/commit/972703aa8e219b87f38585cbf9631f0c43fd643c
 [3f49e30]: https://github.com/ChristianGrete/exit-process-with-error/commit/3f49e305b5453ac6707f81ecde2103bf93e2d2f4
-[HEAD]: https://github.com/ChristianGrete/exit-process-with-error/commit/HEAD
 [develop]: https://github.com/ChristianGrete/exit-process-with-error/compare/master...develop
+[HEAD]: https://github.com/ChristianGrete/exit-process-with-error/commit/HEAD
 [master]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...master
 
 ---
