@@ -23,7 +23,7 @@ const relativePathsPattern = /(CONTRIBUTING\.md|LICENSE)/g
 // LIB //
 /////////
 
-const {readFile, writeFile} = require(DIRNAME_LIB)
+const {exitProcessWithError, readFile, writeFile} = require(DIRNAME_LIB)
 
 ///////////
 // TASKS //
@@ -99,14 +99,6 @@ function modifyReadmeFileContent($results) {
 
 function saveContentToDistReadmeFile($content) {
   return writeFile(FILENAME_README_OUT, $content)
-}
-
-function exitProcessWithError($error) {
-  $error.exitCode = $error.exitCode || 1
-
-  console.error($error) // tslint:disable-line:no-console
-
-  process.exit($error.exitCode)
 }
 
 // Running the tasks step by step

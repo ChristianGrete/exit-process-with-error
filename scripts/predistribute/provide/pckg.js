@@ -18,7 +18,7 @@ const ERR_INVALID_PACKAGE = 'Cannot parse package.json or package-diff.json'
 // LIB //
 /////////
 
-const {readFile, writeFile} = require(DIRNAME_LIB)
+const {exitProcessWithError, readFile, writeFile} = require(DIRNAME_LIB)
 
 ///////////
 // TASKS //
@@ -128,14 +128,6 @@ function stringifyPackage($package) {
 
 function saveJSONToDistPackageFile($json) {
   return writeFile(FILENAME_PACKAGE_DIST, $json)
-}
-
-function exitProcessWithError($error) {
-  $error.exitCode = $error.exitCode || 1
-
-  console.error($error) // tslint:disable-line:no-console
-
-  process.exit($error.exitCode)
 }
 
 // Running the tasks step by step

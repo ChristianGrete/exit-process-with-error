@@ -1,75 +1,85 @@
-const {readFile, rename, writeFile} = require('fs')
 const {join, parse, resolve} = require('path')
+
+//////////////
+// SETTINGS //
+//////////////
 
 // Paths and filenames
 const BASEPATH = resolve(__dirname, '..')
 const DIRNAME_BUILD = join(BASEPATH, 'build')
+const DIRNAME_LIB = join(BASEPATH, 'lib')
+const FILENAME_MAP_NEW = join(DIRNAME_BUILD, 'exitProcessWithError.mjs.map')
+const FILENAME_MAP_OLD = join(DIRNAME_BUILD, 'exitProcessWithError.js.map')
+const FILENAME_JAVASCRIPT_NEW = join(DIRNAME_BUILD, 'exitProcessWithError.mjs')
+const FILENAME_JAVASCRIPT_OLD = join(DIRNAME_BUILD, 'exitProcessWithError.js')
 
-// Renames the .js file extensions to .mjs
+const oldFilenamesPattern = /exitProcessWithError\.js/g
+
+const NEW_FILENAMES_REPLACEMENT = 'exitProcessWithError.mjs'
+
+/////////
+// LIB //
+/////////
+
+const {exitProcessWithError, readFile, rename, writeFile} = require(DIRNAME_LIB)
+
+///////////
+// TASKS //
+///////////
+
 function renameFiles() {
-  return new Promise(($resolve, $reject) => {
-    rename(
-      join(DIRNAME_BUILD, 'exitProcessWithError.js'),
-      join(DIRNAME_BUILD, 'exitProcessWithError.mjs'),
-      $jsError => {
-        if ($jsError !== null) {
-          $reject($jsError)
-        } else {
-          rename(
-            join(DIRNAME_BUILD, 'exitProcessWithError.js.map'),
-            join(DIRNAME_BUILD, 'exitProcessWithError.mjs.map'),
-            $mapError => {
-              if ($mapError !== null) {
-                $reject($mapError)
-              } else {
-                $resolve()
-              }
-            }
-          )
-        }
-      }
-    )
-  })
-}
-
-// Replaces the occurrences of .js file extensions with .mjs
-function replaceFilenameOccurrences() {
-  const _oldFilenamesPattern = /exitProcessWithError\.js/g
-
   return Promise.all([
-    join(DIRNAME_BUILD, 'exitProcessWithError.mjs'),
-    join(DIRNAME_BUILD, 'exitProcessWithError.mjs.map')
-  ].map($filename => new Promise(($resolve, $reject) => {
-    readFile($filename, 'utf8', ($readError, $data) => {
-      if ($readError !== null) {
-        $reject($readError)
-      } else {
-        const _matches = $data.match(_oldFilenamesPattern)
-
-        if (Array.isArray(_matches) && _matches.length > 0) {
-          writeFile(
-            $filename,
-            $data.replace(_oldFilenamesPattern, 'exitProcessWithError.mjs'),
-            'utf8',
-            $writeError => {
-              if ($writeError !==  null) {
-                $reject($writeError)
-              } else {
-                $resolve()
-              }
-            }
-          )
-        }
-      }
-    })
-  })))
+    rename(FILENAME_JAVASCRIPT_OLD, FILENAME_JAVASCRIPT_NEW),
+    rename(FILENAME_MAP_OLD, FILENAME_MAP_NEW)
+  ])
 }
 
-// Runs both tasks
-renameFiles()
-  .then(replaceFilenameOccurrences)
-  .catch($error => {
-    $error.exitCode = $error.exitCode || 1
-    console.error($error) // tslint:disable-line:no-console
-    process.exit($error.exitCode)
+function readRenamedFiles($changes) {
+  return (
+    Promise.all($changes.map($change => (
+        readFile($change[1])
+          .then($data => ({[$change[1]]: $data}))
+    )))
+      .then($results => {
+        const _files = {}
+
+        $results.forEach($result => Object.assign(_files, $result))
+
+        return _files
+      })
+  )
+}
+
+function replaceFilenameOccurrences($files) {
+  const _changedFiles = {}
+
+  Object.keys($files).forEach($filename => {
+    const _content = $files[$filename]
+    const _matches = _content.match(oldFilenamesPattern)
+
+    if (Array.isArray(_matches) && _matches.length > 0) {
+      Object.assign(_changedFiles, {
+        [$filename]: _content.replace(
+          oldFilenamesPattern,
+          NEW_FILENAMES_REPLACEMENT
+        )
+      })
+    }
   })
+
+  return _changedFiles
+}
+
+function saveUpdatedFileContents($updatedFiles) {
+  return Promise.all(Object.keys($updatedFiles).map($filename => writeFile(
+    $filename,
+    $updatedFiles[$filename]
+  )))
+}
+
+// Running the tasks step by step
+renameFiles()
+  .then(readRenamedFiles)
+  .then(replaceFilenameOccurrences)
+  .then(saveUpdatedFileContents)
+  .catch(exitProcessWithError)

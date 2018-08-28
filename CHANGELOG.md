@@ -7,9 +7,11 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 ## [Unreleased]
 
 ### [develop]
+#### Added
+- chore(*): extend project library [[bdb4e41]]
 #### Changed
 - docs(readme): update badges/shields [[c446f09]]
-- chore(*): extend project library
+- chore(*): refactor npm scripts
 
 ### [master]
 #### Added
@@ -53,6 +55,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - chore(*): define code ownership [[c791b5d]]
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[bdb4e41]: https://github.com/ChristianGrete/exit-process-with-error/commit/bdb4e41716da2f818686757d72f5fb7015d9e6ee
 [c446f09]: https://github.com/ChristianGrete/exit-process-with-error/commit/c446f09d864b28c45085fa9fd7129f861913bf1b
 [40f0ace]: https://github.com/ChristianGrete/exit-process-with-error/commit/40f0acebc2b283627329ecafa2f167ba3dda4f31
 [8dca1bf]: https://github.com/ChristianGrete/exit-process-with-error/commit/8dca1bfd57cd136333089efc67563dbfc00dd985
