@@ -1,6 +1,6 @@
-const fsWriteFile = require('fs').writeFile
+import {writeFile as fsWriteFile} from 'fs'
 
-function writeFile($file, $data, $options) {
+export function writeFile($file, $data, $options) {
   return new Promise(($resolve, $reject) => fsWriteFile(
     $file,
     $data,
@@ -15,4 +15,4 @@ function writeFile($file, $data, $options) {
   ))
 }
 
-module.exports = writeFile
+export default writeFile

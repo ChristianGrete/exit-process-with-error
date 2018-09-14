@@ -12,8 +12,9 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 #### Changed
 - docs(readme): update badges/shields [[c446f09]]
 - chore(*): refactor npm scripts [[b71b777]]
+- chore(*): softly migrate scripts to ts-node
 #### Security
-- chore(*): update dev-deps and engines
+- chore(*): update dev-deps and engines [[14c00dc]]
 
 ### [master]
 #### Added
@@ -57,6 +58,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - chore(*): define code ownership [[c791b5d]]
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[14c00dc]: https://github.com/ChristianGrete/exit-process-with-error/commit/14c00dca171260bbce142be1760e6502594bde08
 [b71b777]: https://github.com/ChristianGrete/exit-process-with-error/commit/b71b777aabfd587adeadab1c5e2c3d177a6f9207
 [bdb4e41]: https://github.com/ChristianGrete/exit-process-with-error/commit/bdb4e41716da2f818686757d72f5fb7015d9e6ee
 [c446f09]: https://github.com/ChristianGrete/exit-process-with-error/commit/c446f09d864b28c45085fa9fd7129f861913bf1b

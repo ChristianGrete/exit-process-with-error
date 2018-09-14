@@ -1,6 +1,6 @@
-const fsReadFile = require('fs').readFile
+import {readFile as fsReadFile} from 'fs'
 
-function readFile($path, $options = 'utf8') {
+export function readFile($path, $options = 'utf8') {
   return new Promise(($resolve, $reject) => fsReadFile(
     $path,
     $options,
@@ -14,4 +14,4 @@ function readFile($path, $options = 'utf8') {
   ))
 }
 
-module.exports = readFile
+export default readFile

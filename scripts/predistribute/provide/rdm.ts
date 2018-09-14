@@ -1,5 +1,5 @@
-const {join, resolve} = require('path')
-const {parse} = require('url')
+import {join, resolve} from 'path'
+import {parse} from 'url'
 
 //////////////
 // SETTINGS //
@@ -23,6 +23,7 @@ const relativePathsPattern = /(CONTRIBUTING\.md|LICENSE)/g
 // LIB //
 /////////
 
+// tslint:disable-next-line:no-var-requires
 const {exitProcessWithError, readFile, writeFile} = require(DIRNAME_LIB)
 
 ///////////

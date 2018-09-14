@@ -1,6 +1,6 @@
-const fsRename = require('fs').rename
+import {rename as fsRename} from 'fs'
 
-function rename($oldPath, $newPath) {
+export function rename($oldPath, $newPath) {
   return new Promise(($resolve, $reject) => fsRename(
     $oldPath,
     $newPath,
@@ -14,4 +14,4 @@ function rename($oldPath, $newPath) {
   ))
 }
 
-module.exports = rename
+export default rename

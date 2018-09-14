@@ -41,6 +41,11 @@
       ],
       "severity": "warning"
     },
+    "arrow-parens": {
+      "options": [
+        "ban-single-arg-parens"
+      ]
+    },
     "interface-name": {
       "options": [
         "never-prefix"

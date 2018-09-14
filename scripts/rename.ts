@@ -1,4 +1,4 @@
-const {join, parse, resolve} = require('path')
+import {join, parse, resolve} from 'path'
 
 //////////////
 // SETTINGS //
@@ -21,6 +21,7 @@ const NEW_FILENAMES_REPLACEMENT = 'exitProcessWithError.mjs'
 // LIB //
 /////////
 
+// tslint:disable-next-line:no-var-requires
 const {exitProcessWithError, readFile, rename, writeFile} = require(DIRNAME_LIB)
 
 ///////////

@@ -1,4 +1,4 @@
-function exitProcessWithError($error) {
+export function exitProcessWithError($error) {
   $error.exitCode = $error.exitCode || 1
 
   console.error($error) // tslint:disable-line:no-console
@@ -6,4 +6,4 @@ function exitProcessWithError($error) {
   process.exit($error.exitCode)
 }
 
-module.exports = exitProcessWithError
+export default exitProcessWithError

@@ -1,4 +1,4 @@
-const {isAbsolute, join, relative, resolve} = require('path')
+import {isAbsolute, join, relative, resolve} from 'path'
 
 //////////////
 // SETTINGS //
@@ -18,6 +18,7 @@ const ERR_INVALID_PACKAGE = 'Cannot parse package.json or package-diff.json'
 // LIB //
 /////////
 
+// tslint:disable-next-line:no-var-requires
 const {exitProcessWithError, readFile, writeFile} = require(DIRNAME_LIB)
 
 ///////////
