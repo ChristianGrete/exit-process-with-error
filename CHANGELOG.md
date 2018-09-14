@@ -7,14 +7,6 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 ## [Unreleased]
 
 ### [develop]
-#### Added
-- chore(*): extend project library [[bdb4e41]]
-#### Changed
-- docs(readme): update badges/shields [[c446f09]]
-- chore(*): refactor npm scripts [[b71b777]]
-- chore(*): softly migrate scripts to ts-node
-#### Security
-- chore(*): update dev-deps and engines [[14c00dc]]
 
 ### [master]
 #### Added
@@ -25,6 +17,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - docs(readme): add getting started section [[4b3e7d4]]
 - chore(*): implement production build [[#2] | [c3a485b]]
 - docs(readme): add example section [[17f2a4e]]
+- chore(*): extend project library [[bdb4e41]]
 #### Changed
 - docs(readme): link develop branch [[972703a]]
 - docs(readme): move bomb emoji [[579b2d4]]
@@ -38,6 +31,10 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - docs(license): refresh template [[4792af8]]
 - docs(log): update changelog [[67a7292]]
 - docs(log): update changelog, again [[40f0ace]]
+- docs(readme): update badges/shields [[c446f09]]
+- chore(*): refactor npm scripts [[b71b777]]
+- chore(*): softly migrate scripts to ts-node [[0a1db76]]
+- docs(log): update changelog once more
 #### Deprecated
 - chore(*): drop es5 support [[#1] | [c700b02]]
 #### Fixed
@@ -56,8 +53,10 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - chore(*): add stable node version [[1f3fbc2]]
 - chore(*): add custom travis build script [[d81c3f8]]
 - chore(*): define code ownership [[c791b5d]]
+- chore(*): update dev-deps and engines [[14c00dc]]
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[0a1db76]: https://github.com/ChristianGrete/exit-process-with-error/commit/0a1db76033640a599f29d312207cdae3b8089744
 [14c00dc]: https://github.com/ChristianGrete/exit-process-with-error/commit/14c00dca171260bbce142be1760e6502594bde08
 [b71b777]: https://github.com/ChristianGrete/exit-process-with-error/commit/b71b777aabfd587adeadab1c5e2c3d177a6f9207
 [bdb4e41]: https://github.com/ChristianGrete/exit-process-with-error/commit/bdb4e41716da2f818686757d72f5fb7015d9e6ee
@@ -99,7 +98,6 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 [972703a]: https://github.com/ChristianGrete/exit-process-with-error/commit/972703aa8e219b87f38585cbf9631f0c43fd643c
 [3f49e30]: https://github.com/ChristianGrete/exit-process-with-error/commit/3f49e305b5453ac6707f81ecde2103bf93e2d2f4
 [develop]: https://github.com/ChristianGrete/exit-process-with-error/compare/master...develop
-[HEAD]: https://github.com/ChristianGrete/exit-process-with-error/commit/HEAD
 [master]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...master
 
 ---
