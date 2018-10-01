@@ -1,10 +1,10 @@
 import {readFile as fsReadFile} from 'fs'
 
-export function readFile($path, $options = 'utf8') {
-  return new Promise(($resolve, $reject) => fsReadFile(
+export function readFile($path:string):Promise<string> {
+  return new Promise(($resolve, $reject):void => fsReadFile(
     $path,
-    $options,
-    ($error, $data) => {
+    'utf8',
+    ($error:NodeJS.ErrnoException|null, $data:string) => {
       if ($error === null) {
         $resolve($data)
       } else {

@@ -99,7 +99,7 @@
     "lint": "run-p lint:js lint:json lint:ts",
     "lint:js": "tslint stryker.conf.js scripts/**/*.js",
     "lint:json": "jsonlint-cli .babelrc ts{config,lint}.json",
-    "lint:ts": "tslint s{cripts,rc}/**/*.ts",
+    "lint:ts": "tslint {lib,s{cripts,rc}}/**/*.ts",
     "mutate": "stryker run",
     "predistribute": "run-s predistribute:prepare && run-p predistribute:uglify predistribute:provide",
     "predistribute:prepare": "run-p build clear:dist && run-s 'declare -- --outDir dist/' predistribute:rename",

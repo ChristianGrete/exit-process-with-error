@@ -1,10 +1,10 @@
 import {rename as fsRename} from 'fs'
 
-export function rename($oldPath, $newPath) {
-  return new Promise(($resolve, $reject) => fsRename(
+export function rename($oldPath:string, $newPath:string):Promise<string[]> {
+  return new Promise(($resolve, $reject):void => fsRename(
     $oldPath,
     $newPath,
-    $error => {
+    ($error:NodeJS.ErrnoException|null) => {
       if ($error === null) {
         $resolve([$oldPath, $newPath])
       } else {
