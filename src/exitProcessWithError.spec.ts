@@ -1,12 +1,12 @@
 import {readFileSync} from 'fs'
 import {join, resolve} from 'path'
 
-import * as imports from './exitProcessWithError.ts'
+import * as imports from './exitProcessWithError'
 
-const BASEPATH = resolve(__dirname, '..')
-const FILENAME_PACKAGE = join(BASEPATH, 'package.json')
+const BASEPATH:string = resolve(__dirname, '..')
+const FILENAME_PACKAGE:string = join(BASEPATH, 'package.json')
 
-const {name: MODULE_ID} = JSON.parse(readFileSync(FILENAME_PACKAGE, 'utf8'))
+const {name:MODULE_ID}:{name:string} = JSON.parse(readFileSync(FILENAME_PACKAGE, 'utf8'))
 
 describe(MODULE_ID, () => {
   it('exports exitProcessWithError() as default member', () => {
@@ -31,8 +31,8 @@ describe('defaultError', () => {
 })
 
 describe('exitProcessWithError()', () => {
-  const {error: _originalErrorMethod} = console
-  const {exit: _originalExitMethod} = process
+  const {error:_originalErrorMethod} = console
+  const {exit:_originalExitMethod} = process
 
   it('is a function', () => {
     expect(typeof exitProcessWithError).toBe('function')
@@ -40,7 +40,7 @@ describe('exitProcessWithError()', () => {
 
   beforeEach(() => {
     console.error = jest.fn() // tslint:disable-line:no-console
-    process.exit = jest.fn()
+    process.exit = jest.fn() as any
   })
 
   afterEach(() => {
@@ -62,7 +62,7 @@ describe('exitProcessWithError()', () => {
 
   describe('when invoked with an instance of Error passed as argument', () => {
     describe('and no .exitCode property is set', () => {
-      var _error
+      var _error:Error
 
       beforeEach(() => {
         _error = new Error()
@@ -80,9 +80,9 @@ describe('exitProcessWithError()', () => {
     })
 
     describe('and a user defined .exitCode property is set', () => {
-      var _error
+      var _error:imports.ErrorWithOptionalExitCode
 
-      const _EXIT_CODE = 2
+      const _EXIT_CODE:number = 2
 
       beforeEach(() => {
         _error = new Error()
@@ -102,16 +102,16 @@ describe('exitProcessWithError()', () => {
   })
 
   describe('when invoked with a process object passed as 2nd argument', () => {
-    var _error
+    var _error:imports.ErrorWithOptionalExitCode
 
-    const _EXIT_CODE = 3
+    const _EXIT_CODE:number = 3
 
-    const _process = {}
+    const _process = {} as NodeJS.Process
 
     beforeEach(() => {
       _error = new Error()
       _error.exitCode = _EXIT_CODE
-      _process.exit = jest.fn()
+      _process.exit = jest.fn() as any
     })
 
     it('calls its .exit() method and passes the respective exit code', () => {
