@@ -13,16 +13,10 @@ leftWindowTitle = "$projectName$scmBranch"
 softTabs = true
 tabSize = 2
 windowTitle = "$leftWindowTitle$rightWindowTitle"
-wrapColumn = 80
+wrapColumn = 120
 
 [ attr.untitled ]
 fileType = source.ts
-
-[ source.json ]
-wrapColumn = 120
-
-[ source.tm-properties ]
-wrapColumn = 160
 
 [ text ]
 softTabs = false

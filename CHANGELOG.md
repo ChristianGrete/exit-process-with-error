@@ -7,6 +7,8 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 ## [Unreleased]
 
 ### [develop]
+#### Changed
+- style(mate): increase wrap column width
 
 ### [master]
 #### Added
@@ -34,7 +36,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - docs(readme): update badges/shields [[c446f09]]
 - chore(*): refactor npm scripts [[b71b777]]
 - chore(*): softly migrate scripts to ts-node [[0a1db76]]
-- docs(log): update changelog once more
+- docs(log): update changelog once more [[16a5a6b]]
 #### Deprecated
 - chore(*): drop es5 support [[#1] | [c700b02]]
 #### Fixed
@@ -56,6 +58,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - chore(*): update dev-deps and engines [[14c00dc]]
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[16a5a6b]: https://github.com/ChristianGrete/exit-process-with-error/commit/16a5a6bd75e02240c35eff0396ca4b96e7635e65
 [0a1db76]: https://github.com/ChristianGrete/exit-process-with-error/commit/0a1db76033640a599f29d312207cdae3b8089744
 [14c00dc]: https://github.com/ChristianGrete/exit-process-with-error/commit/14c00dca171260bbce142be1760e6502594bde08
 [b71b777]: https://github.com/ChristianGrete/exit-process-with-error/commit/b71b777aabfd587adeadab1c5e2c3d177a6f9207
