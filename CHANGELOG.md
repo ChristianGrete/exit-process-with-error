@@ -8,7 +8,8 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 
 ### [develop]
 #### Changed
-- style(mate): increase wrap column width
+- style(mate): increase wrap column width [[2225131]]
+- style(src): fit code into new line width
 
 ### [master]
 #### Added
@@ -58,6 +59,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - chore(*): update dev-deps and engines [[14c00dc]]
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[2225131]: https://github.com/ChristianGrete/exit-process-with-error/commit/2225131e8c5ae22a875b0eba56eba39e421cc0f7
 [16a5a6b]: https://github.com/ChristianGrete/exit-process-with-error/commit/16a5a6bd75e02240c35eff0396ca4b96e7635e65
 [0a1db76]: https://github.com/ChristianGrete/exit-process-with-error/commit/0a1db76033640a599f29d312207cdae3b8089744
 [14c00dc]: https://github.com/ChristianGrete/exit-process-with-error/commit/14c00dca171260bbce142be1760e6502594bde08

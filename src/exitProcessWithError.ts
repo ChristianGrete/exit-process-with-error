@@ -5,9 +5,7 @@ interface ErrorWithOptionalExitCode extends Error {
 const ERR_PROCESS_TERMINATED:string = 'Process terminated with undefined error'
 const EXIT_CODE_INVALID_ARG:number = 128
 
-const defaultError:ErrorWithOptionalExitCode = new Error(
-  ERR_PROCESS_TERMINATED
-)
+const defaultError:ErrorWithOptionalExitCode = new Error(ERR_PROCESS_TERMINATED)
 
 Object.defineProperty(defaultError, 'exitCode', {value: EXIT_CODE_INVALID_ARG})
 
@@ -15,10 +13,7 @@ function exitProcessWithError(
   $error:ErrorWithOptionalExitCode = defaultError,
   $process:NodeJS.Process = process
 ):never {
-  const _exitCode:number = (
-    typeof $error.exitCode === 'number' && $error.exitCode !== 0 ?
-      $error.exitCode : 1
-  )
+  const _exitCode:number = (typeof $error.exitCode === 'number' && $error.exitCode !== 0 ? $error.exitCode : 1)
 
   console.error($error) // tslint:disable-line:no-console
 
@@ -27,8 +22,4 @@ function exitProcessWithError(
 
 export default exitProcessWithError
 
-export {
-  defaultError,
-  ErrorWithOptionalExitCode,
-  exitProcessWithError
-}
+export {defaultError, ErrorWithOptionalExitCode, exitProcessWithError}

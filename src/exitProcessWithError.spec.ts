@@ -6,10 +6,7 @@ import * as imports from './exitProcessWithError.ts'
 const BASEPATH = resolve(__dirname, '..')
 const FILENAME_PACKAGE = join(BASEPATH, 'package.json')
 
-const {name: MODULE_ID} = JSON.parse(readFileSync(
-  FILENAME_PACKAGE,
-  'utf8'
-))
+const {name: MODULE_ID} = JSON.parse(readFileSync(FILENAME_PACKAGE, 'utf8'))
 
 describe(MODULE_ID, () => {
   it('exports exitProcessWithError() as default member', () => {
@@ -54,8 +51,7 @@ describe('exitProcessWithError()', () => {
   describe('when invoked without any argument', () => {
     it('calls console.error() and passes defaultError', () => {
       exitProcessWithError()
-      // tslint:disable-next-line:no-console
-      expect(console.error).toHaveBeenCalledWith(defaultError)
+      expect(console.error).toHaveBeenCalledWith(defaultError) // tslint:disable-line:no-console
     })
 
     it('calls process.exit() and passes defaultError.exitCode', () => {
@@ -74,8 +70,7 @@ describe('exitProcessWithError()', () => {
 
       it('calls console.error() and passes the Error instance', () => {
         exitProcessWithError(_error)
-        // tslint:disable-next-line:no-console
-        expect(console.error).toHaveBeenCalledWith(_error)
+        expect(console.error).toHaveBeenCalledWith(_error) // tslint:disable-line:no-console
       })
 
       it('calls process.exit() and passes the general exit code 1', () => {
@@ -96,8 +91,7 @@ describe('exitProcessWithError()', () => {
 
       it('calls console.error() and passes the Error instance', () => {
         exitProcessWithError(_error)
-        // tslint:disable-next-line:no-console
-        expect(console.error).toHaveBeenCalledWith(_error)
+        expect(console.error).toHaveBeenCalledWith(_error) // tslint:disable-line:no-console
       })
 
       it('calls process.exit() and passes the user defined exit code', () => {
