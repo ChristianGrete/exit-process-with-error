@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 
 ### [develop]
 #### Added
-- chore(*): define brew dependencies
+- chore(*): define brew dependencies [[e440920]]
 #### Changed
 - style(mate): increase wrap column width [[2225131]]
 - style(src): fit code into new line width [[22c4dd4]]
@@ -18,6 +18,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - fix(src): make spec work [[09e5e58]]
 #### Security
 - chore(*): update dev-deps and engines, again [[bc421f0]]
+- chore(scripts): add package.json interface to lib
 
 ### [master]
 #### Added
@@ -67,6 +68,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - chore(*): update dev-deps and engines [[14c00dc]]
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[e440920]: https://github.com/ChristianGrete/exit-process-with-error/commit/e4409205786cb35b391f6e776475b866d642ffc0
 [bc421f0]: https://github.com/ChristianGrete/exit-process-with-error/commit/bc421f0b3e4c43fbee8f69d254a3e98ff08123c3
 [98f921d]: https://github.com/ChristianGrete/exit-process-with-error/commit/98f921d480112ca132331319b00755072cbb4dae
 [09e5e58]: https://github.com/ChristianGrete/exit-process-with-error/commit/09e5e589ae78da8f559dd0c88b3e0474d0ba5299
