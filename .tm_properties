@@ -46,6 +46,9 @@ fileType = source.git-config
 [ ".tm_properties" ]
 fileType = source.tm-properties
 
+[ "Brewfile" ]
+fileType = source.ruby
+
 [ "{*.{json,map},.babelrc}" ]
 fileType = source.json
 
