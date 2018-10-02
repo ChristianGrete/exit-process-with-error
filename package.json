@@ -98,7 +98,7 @@
     "compile": "tsc",
     "declare": "tsc --declarationMap false --emitDeclarationOnly",
     "lint": "run-p lint:js lint:json lint:ts",
-    "lint:js": "tslint stryker.conf.js scripts/**/*.js",
+    "lint:js": "tslint stryker.conf.js",
     "lint:json": "jsonlint-cli .babelrc ts{config,lint}.json",
     "lint:ts": "tslint {lib,s{cripts,rc}}/**/*.ts",
     "mutate": "stryker run",
