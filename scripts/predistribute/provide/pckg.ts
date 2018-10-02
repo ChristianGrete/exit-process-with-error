@@ -1,45 +1,43 @@
 import {isAbsolute, join, relative, resolve} from 'path'
 
+/////////
+// LIB //
+/////////
+
+import {exitProcessWithError, Package, readFile, writeFile} from '../../../lib'
+
 //////////////
 // SETTINGS //
 //////////////
 
 // Paths and filenames
-const BASEPATH = resolve(__dirname, '..', '..', '..')
-const DIRNAME_DIST = join(BASEPATH, 'dist')
-const DIRNAME_LIB = join(BASEPATH, 'lib')
-const FILENAME_PACKAGE = join(BASEPATH, 'package.json')
-const FILENAME_PACKAGE_DIFF = join(BASEPATH, 'package-diff.json')
-const FILENAME_PACKAGE_DIST = join(DIRNAME_DIST, 'package.json')
+const BASEPATH:string = resolve(__dirname, '..', '..', '..')
+const DIRNAME_DIST:string = join(BASEPATH, 'dist')
+const FILENAME_PACKAGE:string = join(BASEPATH, 'package.json')
+const FILENAME_PACKAGE_DIFF:string = join(BASEPATH, 'package-diff.json')
+const FILENAME_PACKAGE_DIST:string = join(DIRNAME_DIST, 'package.json')
 
-const ERR_INVALID_PACKAGE = 'Cannot parse package.json or package-diff.json'
-
-/////////
-// LIB //
-/////////
-
-// tslint:disable-next-line:no-var-requires
-const {exitProcessWithError, readFile, writeFile} = require(DIRNAME_LIB)
+const ERR_INVALID_PACKAGE:string = 'Cannot parse package.json or package-diff.json'
 
 ///////////
 // TASKS //
 ///////////
 
-function loadPackage() {
+function loadPackage():Promise<string> {
   return readFile(FILENAME_PACKAGE)
 }
 
-function loadPackageDiff($data) {
+function loadPackageDiff($data:string):Promise<string[]> {
   return (
     readFile(FILENAME_PACKAGE_DIFF)
-      .then($dataDiff => [$data, $dataDiff])
+      .then(($dataDiff:string):string[] => [$data, $dataDiff])
   )
 }
 
-function parsePackage($data) {
-  return new Promise(($resolve, $reject) => {
-    var _error = null
-    var _package
+function parsePackage($data:string):Promise<Package> {
+  return new Promise(($resolve, $reject):void => {
+    var _error:Error|null = null
+    var _package:Package
 
     try {
       _package = JSON.parse($data)
@@ -48,7 +46,7 @@ function parsePackage($data) {
     }
 
     if (_error === null) {
-      if (typeof _package === 'object') {
+      if (_package !== null && typeof _package === 'object') {
         $resolve(_package)
       } else {
         $reject(new TypeError(ERR_INVALID_PACKAGE))
@@ -59,7 +57,7 @@ function parsePackage($data) {
   })
 }
 
-function parsePackages($data) {
+function parsePackages($data:string[]):Promise<Package[]> {
   const [_DATA, _DATA_DIFF] = $data
 
   return Promise.all([
@@ -68,11 +66,11 @@ function parsePackages($data) {
   ])
 }
 
-function mergePackages($packages) {
+function mergePackages($packages:Package[]):Package {
   const [_package, _packageDiff] = $packages
 
-  Object.keys(_packageDiff).forEach($key => {
-    const _value = _packageDiff[$key]
+  Object.keys(_packageDiff).forEach(($key:string):void => {
+    const _value:any = _packageDiff[$key]
 
     if (_value === null) {
       delete _package[$key]
@@ -84,7 +82,7 @@ function mergePackages($packages) {
   return _package
 }
 
-function relativizePath($path) {
+function relativizePath($path:string):string {
   if ($path.includes('dist')) {
     if (!isAbsolute($path)) {
       $path = resolve(BASEPATH, $path)
@@ -96,8 +94,8 @@ function relativizePath($path) {
   return $path
 }
 
-function updateMergedPackagePaths($mergedPackage) {
-  $mergedPackage.files.forEach(($file, $index) => (
+function updateMergedPackagePaths($mergedPackage:Package):Package {
+  $mergedPackage.files.forEach(($file:string, $index:number) => (
     $mergedPackage.files[$index] = relativizePath($file)
   ))
 
@@ -108,10 +106,10 @@ function updateMergedPackagePaths($mergedPackage) {
   return $mergedPackage
 }
 
-function stringifyPackage($package) {
-  return new Promise(($resolve, $reject) => {
-    var _error = null
-    var _json
+function stringifyPackage($package:Package):Promise<string> {
+  return new Promise(($resolve, $reject):void => {
+    var _error:Error|null = null
+    var _json:string
 
     try {
       _json = JSON.stringify($package)
@@ -127,7 +125,7 @@ function stringifyPackage($package) {
   })
 }
 
-function saveJSONToDistPackageFile($json) {
+function saveJSONToDistPackageFile($json:string):Promise<string[]> {
   return writeFile(FILENAME_PACKAGE_DIST, $json)
 }
 

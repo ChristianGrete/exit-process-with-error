@@ -14,11 +14,12 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - style(src): fit code into new line width [[22c4dd4]]
 - refactor(lib): finalize ts-node migration [[239b88b]]
 - refactor(scripts): finalize rename script ts-node migration [[98f921d]]
+- refactor(scripts): finalize provide script ts-node migration
 #### Fixed
 - fix(src): make spec work [[09e5e58]]
 #### Security
 - chore(*): update dev-deps and engines, again [[bc421f0]]
-- chore(scripts): add package.json interface to lib
+- chore(scripts): add package.json interface to lib [[9cf9bb4]]
 
 ### [master]
 #### Added
@@ -68,6 +69,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - chore(*): update dev-deps and engines [[14c00dc]]
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[9cf9bb4]: https://github.com/ChristianGrete/exit-process-with-error/commit/9cf9bb4604b4025470da265e729ad664abd65ff4
 [e440920]: https://github.com/ChristianGrete/exit-process-with-error/commit/e4409205786cb35b391f6e776475b866d642ffc0
 [bc421f0]: https://github.com/ChristianGrete/exit-process-with-error/commit/bc421f0b3e4c43fbee8f69d254a3e98ff08123c3
 [98f921d]: https://github.com/ChristianGrete/exit-process-with-error/commit/98f921d480112ca132331319b00755072cbb4dae

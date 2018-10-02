@@ -1,43 +1,40 @@
 import {join, resolve} from 'path'
-import {parse} from 'url'
+import {parse, Url} from 'url'
+
+/////////
+// LIB //
+/////////
+
+import {exitProcessWithError, readFile, writeFile} from '../../../lib'
 
 //////////////
 // SETTINGS //
 //////////////
 
 // Paths and filenames
-const BASEPATH = resolve(__dirname, '..', '..', '..')
-const DIRNAME_DIST = join(BASEPATH, 'dist')
-const DIRNAME_LIB = join(BASEPATH, 'lib')
-const FILENAME_PACKAGE = join(BASEPATH, 'package.json')
-const FILENAME_README_IN = join(BASEPATH, 'README.md')
-const FILENAME_README_OUT = join(DIRNAME_DIST, 'README.md')
-const PATH_MASTER_BRANCH = '/blob/master/'
+const BASEPATH:string = resolve(__dirname, '..', '..', '..')
+const DIRNAME_DIST:string = join(BASEPATH, 'dist')
+const FILENAME_PACKAGE:string = join(BASEPATH, 'package.json')
+const FILENAME_README_IN:string = join(BASEPATH, 'README.md')
+const FILENAME_README_OUT:string = join(DIRNAME_DIST, 'README.md')
+const PATH_MASTER_BRANCH:string = '/blob/master/'
 
-const ERR_INVALID_HOMEPAGE_PROP = 'Invalid value for property `homepage` in '
-  + 'package.json'
+const ERR_INVALID_HOMEPAGE_PROP:string = 'Invalid value for property `homepage` in package.json'
 
-const relativePathsPattern = /(CONTRIBUTING\.md|LICENSE)/g
-
-/////////
-// LIB //
-/////////
-
-// tslint:disable-next-line:no-var-requires
-const {exitProcessWithError, readFile, writeFile} = require(DIRNAME_LIB)
+const relativePathsPattern:RegExp = /(CONTRIBUTING\.md|LICENSE)/g
 
 ///////////
 // TASKS //
 ///////////
 
-function loadPackage() {
+function loadPackage():Promise<string> {
   return readFile(FILENAME_PACKAGE)
 }
 
-function getPackageHomepage($data) {
-  return new Promise(($resolve, $reject) => {
-    var _error = null
-    var _homepage
+function getPackageHomepage($data:string):Promise<string> {
+  return new Promise(($resolve, $reject):void => {
+    var _error:Error|null = null
+    var _homepage:string
 
     try {
       _homepage = JSON.parse($data).homepage
@@ -53,10 +50,10 @@ function getPackageHomepage($data) {
   })
 }
 
-function getValidatedPackageHomepageURL($homepage) {
-  return new Promise(($resolve, $reject) => {
-    var _error = null
-    var _parsedHomepage
+function getValidatedPackageHomepageURL($homepage:string):Promise<string> {
+  return new Promise(($resolve, $reject):void => {
+    var _error:Error|null = null
+    var _parsedHomepage:Url
 
     try {
       _parsedHomepage = parse($homepage)
@@ -76,29 +73,28 @@ function getValidatedPackageHomepageURL($homepage) {
   })
 }
 
-function appendMasterBranchPathToURL($homepageURL) {
+function appendMasterBranchPathToURL($homepageURL:string):string {
   return $homepageURL + PATH_MASTER_BRANCH
 }
 
-function getReadmeFileContent($homepageURL) {
+function getReadmeFileContent($homepageURL:string):Promise<string[]> {
   return (
     readFile(FILENAME_README_IN)
-      .then($data => [$homepageURL, $data])
+      .then(($data:string) => [$homepageURL, $data])
   )
 }
 
-function modifyReadmeFileContent($results) {
+function modifyReadmeFileContent($results:string[]):string {
   const [_HOMEPAGE_URL, _README_CONTENT] = $results
-  const _matches = _README_CONTENT.match(relativePathsPattern)
+  const _matches:string[]|null = _README_CONTENT.match(relativePathsPattern)
 
   return (
     Array.isArray(_matches) && _matches.length > 0 ?
-      _README_CONTENT.replace(relativePathsPattern, _HOMEPAGE_URL + '$&') :
-        _README_CONTENT
+      _README_CONTENT.replace(relativePathsPattern, _HOMEPAGE_URL + '$&') : _README_CONTENT
   )
 }
 
-function saveContentToDistReadmeFile($content) {
+function saveContentToDistReadmeFile($content:string):Promise<string[]> {
   return writeFile(FILENAME_README_OUT, $content)
 }
 
