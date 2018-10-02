@@ -19,7 +19,7 @@
   "description": "A function to terminate Node.js processes with an error and a non-zero exit code",
   "devDependencies": {
     "@types/jest": "^23.3.2",
-    "@types/node": "^10.9.4",
+    "@types/node": "^10.11.3",
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "browser-sync": "^2.24.7",
@@ -27,21 +27,21 @@
     "jsonlint-cli": "^1.0.1",
     "npm-run-all": "^4.1.3",
     "shx": "^0.3.2",
-    "stryker": "^0.29.1",
-    "stryker-api": "^0.21.0",
-    "stryker-html-reporter": "^0.16.1",
-    "stryker-jest-runner": "^1.2.0",
-    "stryker-typescript": "^0.14.0",
-    "ts-jest": "^23.1.4",
+    "stryker": "^0.29.4",
+    "stryker-api": "^0.21.1",
+    "stryker-html-reporter": "^0.16.3",
+    "stryker-jest-runner": "^1.2.1",
+    "stryker-typescript": "^0.14.1",
+    "ts-jest": "^23.10.3",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
     "tslint-config-standard": "^8.0.1",
     "tslint-eslint-rules": "^5.4.0",
-    "typescript": "^3.0.3",
+    "typescript": "^3.1.1",
     "uglify-es": "^3.3.9"
   },
   "engines": {
-    "node": "^10.10.0",
+    "node": "^10.11.0",
     "npm": "^6.4.1"
   },
   "files": [
