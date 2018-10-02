@@ -18,6 +18,7 @@
   "dependencies": {},
   "description": "A function to terminate Node.js processes with an error and a non-zero exit code",
   "devDependencies": {
+    "@types/browser-sync": "0.0.42",
     "@types/jest": "^23.3.2",
     "@types/node": "^10.11.3",
     "babel-cli": "^6.26.0",
@@ -118,7 +119,7 @@
     "report": "run-s report:mutation report:coverage",
     "report:coverage": "jest --coverage",
     "report:mutation": "stryker run --reporters html",
-    "start": "browser-sync start -c scripts/start.js",
+    "start": "ts-node -P tsconfig-node.json scripts/start.ts",
     "test": "jest",
     "transform": "babel build/exitProcessWithError.mjs -o build/exitProcessWithError.js -s"
   },
