@@ -2,7 +2,7 @@ import {ChildProcess, exec, ExecException} from 'child_process'
 
 export function npmRunScript($script:string):Promise<void> {
   return (
-    new Promise(($resolve, $reject):ChildProcess => exec(
+    new Promise<string>(($resolve, $reject):ChildProcess => exec(
       'npm run-script ' + $script,
       ($error:ExecException|null, $stdout:string) => {
         if ($error === null) {

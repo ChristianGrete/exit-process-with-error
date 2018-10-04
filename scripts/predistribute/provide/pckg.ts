@@ -37,7 +37,7 @@ function loadPackageDiff($data:string):Promise<string[]> {
 function parsePackage($data:string):Promise<Package> {
   return new Promise(($resolve, $reject):void => {
     var _error:Error|null = null
-    var _package:Package
+    var _package:Package|undefined
 
     try {
       _package = JSON.parse($data)
@@ -95,13 +95,25 @@ function relativizePath($path:string):string {
 }
 
 function updateMergedPackagePaths($mergedPackage:Package):Package {
-  $mergedPackage.files.forEach(($file:string, $index:number) => (
-    $mergedPackage.files[$index] = relativizePath($file)
-  ))
+  if (Array.isArray($mergedPackage.files)) {
+    const _mergedPackageFiles = $mergedPackage.files
 
-  $mergedPackage.main = relativizePath($mergedPackage.main)
-  $mergedPackage.module = relativizePath($mergedPackage.module)
-  $mergedPackage.types = relativizePath($mergedPackage.types)
+    _mergedPackageFiles.forEach(($file:string, $index:number) => (
+      _mergedPackageFiles[$index] = relativizePath($file)
+    ))
+  }
+
+  if (typeof $mergedPackage.main === 'string') {
+    $mergedPackage.main = relativizePath($mergedPackage.main)
+  }
+
+  if (typeof $mergedPackage.module === 'string') {
+    $mergedPackage.module = relativizePath($mergedPackage.module)
+  }
+
+  if (typeof $mergedPackage.types === 'string') {
+    $mergedPackage.types = relativizePath($mergedPackage.types)
+  }
 
   return $mergedPackage
 }
@@ -109,7 +121,7 @@ function updateMergedPackagePaths($mergedPackage:Package):Package {
 function stringifyPackage($package:Package):Promise<string> {
   return new Promise(($resolve, $reject):void => {
     var _error:Error|null = null
-    var _json:string
+    var _json:string|undefined
 
     try {
       _json = JSON.stringify($package)

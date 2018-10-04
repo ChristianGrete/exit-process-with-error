@@ -29,7 +29,7 @@ const browserSyncOptions:BrowserSyncOptionsWithCwd = {
     {
       fn() {
         npmRunScript('prestart')
-          .then(() => this.reload())
+          .then(() => (this as any).reload())
       },
       match: ['src/**/*.ts']
     }

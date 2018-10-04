@@ -34,7 +34,7 @@ function loadPackage():Promise<string> {
 function getPackageHomepage($data:string):Promise<string> {
   return new Promise(($resolve, $reject):void => {
     var _error:Error|null = null
-    var _homepage:string
+    var _homepage:string|undefined
 
     try {
       _homepage = JSON.parse($data).homepage
@@ -53,7 +53,7 @@ function getPackageHomepage($data:string):Promise<string> {
 function getValidatedPackageHomepageURL($homepage:string):Promise<string> {
   return new Promise(($resolve, $reject):void => {
     var _error:Error|null = null
-    var _parsedHomepage:Url
+    var _parsedHomepage:Url|undefined
 
     try {
       _parsedHomepage = parse($homepage)
@@ -61,7 +61,7 @@ function getValidatedPackageHomepageURL($homepage:string):Promise<string> {
       _error = $error
     }
 
-    if (_error === null) {
+    if (_error === null && _parsedHomepage !== null && typeof _parsedHomepage === 'object') {
       if (_parsedHomepage.hostname === null) {
         $reject(new TypeError(ERR_INVALID_HOMEPAGE_PROP))
       } else {
