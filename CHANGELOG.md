@@ -22,7 +22,8 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 #### Security
 - chore(*): update dev-deps and engines, again [[bc421f0]]
 - chore(scripts): add package.json interface to lib [[9cf9bb4]]
-- chore(*): migrate ts-node to strict mode
+- chore(*): migrate ts-node to strict mode [[a400f24]]
+- chore(src): migrate tsc to strict mode
 
 ### [master]
 #### Added
@@ -72,6 +73,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - chore(*): update dev-deps and engines [[14c00dc]]
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[a400f24]: https://github.com/ChristianGrete/exit-process-with-error/commit/a400f24228acc6b7ffa4b5f5405af8ba7e685765
 [72dfe5b]: https://github.com/ChristianGrete/exit-process-with-error/commit/72dfe5b6be1f709726af05caa02528fe1f100abd
 [0b27d03]: https://github.com/ChristianGrete/exit-process-with-error/commit/0b27d03afee5f7146495fd6b2b93e31237a61515
 [0ccdcf6]: https://github.com/ChristianGrete/exit-process-with-error/commit/0ccdcf6f98b7754b8f7959033282c3b5ffade456
