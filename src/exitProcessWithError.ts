@@ -13,7 +13,9 @@ function exitProcessWithError(
   $error:ErrorWithOptionalExitCode = defaultError,
   $process:NodeJS.Process = process
 ):never {
-  const _exitCode:number = (typeof $error.exitCode === 'number' && $error.exitCode !== 0 ? $error.exitCode : 1)
+  const _exitCode:number|undefined = (
+    typeof $error.exitCode === 'number' && $error.exitCode !== 0 ? $error.exitCode : 1
+  )
 
   console.error($error) // tslint:disable-line:no-console
 
