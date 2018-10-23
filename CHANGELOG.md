@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - refactor(scripts): finalize provide script ts-node migration [[0ccdcf6]]
 - refactor(scripts): migrate start script to ts-node [[0b27d03]]
 - refactor(scripts): finalize npm scripts ts-node migration [[72dfe5b]]
+- style(src): use export declarations instead of clauses
 #### Fixed
 - fix(src): make spec work [[09e5e58]]
 - fix(src): reduce stryker runtime errors [[2460102]]
@@ -25,7 +26,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - chore(scripts): add package.json interface to lib [[9cf9bb4]]
 - chore(*): migrate ts-node to strict mode [[a400f24]]
 - chore(src): migrate tsc to strict mode [[c64c1dd]]
-- chore(*): update dev-deps and engines
+- chore(*): update dev-deps and engines [[5ca2dd6]]
 
 ### [master]
 #### Added
@@ -75,6 +76,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - chore(*): update dev-deps and engines [[14c00dc]]
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[5ca2dd6]: https://github.com/ChristianGrete/exit-process-with-error/commit/5ca2dd61db109063deb3c179748801845cc7a91f
 [2460102]: https://github.com/ChristianGrete/exit-process-with-error/commit/246010220ec01065c097257e2a0f8c7551a6f0db
 [c64c1dd]: https://github.com/ChristianGrete/exit-process-with-error/commit/c64c1dda66c6db5bf40a8c706daa27885bcda480
 [a400f24]: https://github.com/ChristianGrete/exit-process-with-error/commit/a400f24228acc6b7ffa4b5f5405af8ba7e685765
