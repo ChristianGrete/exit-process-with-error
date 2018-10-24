@@ -27,7 +27,8 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - chore(*): migrate ts-node to strict mode [[a400f24]]
 - chore(src): migrate tsc to strict mode [[c64c1dd]]
 - chore(*): update dev-deps and engines [[5ca2dd6]]
-- chore(scripts): make package.json merge stable
+- chore(scripts): make package.json merge stable [[a2f072c]]
+- chore(*): define typescript minimum version
 
 ### [master]
 #### Added
@@ -77,6 +78,7 @@ The format is based on [Keep a Changelog][keep-a-changelog-spec-url] and this pr
 - chore(*): update dev-deps and engines [[14c00dc]]
 
 [Unreleased]: https://github.com/ChristianGrete/exit-process-with-error/compare/3f49e305b5453ac6707f81ecde2103bf93e2d2f4...develop
+[a2f072c]: https://github.com/ChristianGrete/exit-process-with-error/commit/a2f072c7ebb04d11c09d2c433d0bbdd39ec6b4cd
 [bf1efc7]: https://github.com/ChristianGrete/exit-process-with-error/commit/bf1efc790c6a1beb9d5e3a8aff93c23e9516db47
 [5ca2dd6]: https://github.com/ChristianGrete/exit-process-with-error/commit/5ca2dd61db109063deb3c179748801845cc7a91f
 [2460102]: https://github.com/ChristianGrete/exit-process-with-error/commit/246010220ec01065c097257e2a0f8c7551a6f0db
