@@ -1,5 +1,11 @@
 import {isAbsolute, join, relative, resolve} from 'path'
 
+//////////////////
+// NODE MODULES //
+//////////////////
+
+import JSONStableStringify from 'json-stable-stringify'
+
 /////////
 // LIB //
 /////////
@@ -124,7 +130,7 @@ function stringifyPackage($package:Package):Promise<string> {
     var _json:string|undefined
 
     try {
-      _json = JSON.stringify($package)
+      _json = JSONStableStringify($package)
     } catch ($error) {
       _error = $error
     }
